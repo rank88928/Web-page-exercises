@@ -1,0 +1,111 @@
+// 頁頭
+.header{
+    position: absolute;
+    right: -500px;
+    width: 450px;
+    height: 1000px;
+    background-color: #f2ebeb;
+    background-image: url(/img/main_bg.png);
+    z-index: 9999;
+    opacity: 1;
+    display: flex;
+    // 導航
+    .top-nav{
+       margin: 50px 10px;
+       position: relative;
+       .contact-us{
+            width: 270px;
+            padding: 10px 0px;
+            border-bottom: 3px solid #000000;
+       }
+       .nav{
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            margin-top: 50px;
+        a{
+            font-size: 20px;
+            margin: 15px 0;
+            &:hover{
+                color: #c69000;
+            }
+        }
+       }
+       .closure-btn{
+        position: absolute;
+        top: -20px;
+        left: 300px;
+        width: 60px;
+        height: 60px;
+        background-color: #000000;
+        border-radius: 50%;
+        color: #f2ebeb;
+        line-height: 60px;
+        font-size: 30px;
+        text-align: center;
+        &::after{
+            position: absolute;
+            content: "close";
+            color: #000000;
+            font-size: 18px;
+            top: 50px;
+            left: 5px;
+            letter-spacing:3px;
+        }
+       }
+       .copyright{
+            position: absolute;
+            top: 100px;
+            left: 320px;
+            writing-mode: vertical-rl;
+            height:250px;
+            font-size: 14px;
+       }
+    }
+}
+
+// 頁頭結束
+
+
+
+// 頁尾
+.footer{
+    height: 400px;
+    padding: 0 70px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    .txt{
+        display: flex;
+        margin-top: 90px;
+        justify-content:space-between; 
+        width: 80%;
+        .contact-us{
+            padding-bottom: 40px;       
+        }
+        .social-links{
+            display: flex;
+            a{
+                @include icon-r-y-40;
+                margin: 0 15px;
+            }
+        }
+    }
+    .last-nav{
+        padding-top: 40px;
+        border-top: 2px solid #000;
+        width: 80%;
+        margin-top: 30px;
+        text-align: center;
+        font-size: 16px;
+        a{
+            margin: 0 10px;
+        }
+    }
+
+    .back-top{
+        margin-top: 100px;
+        width: 70%;
+        text-align: center;
+    }
+}

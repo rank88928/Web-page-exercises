@@ -1,0 +1,94 @@
+
+
+
+// 統一設定
+body{
+    // overflow:hidden;
+}
+
+// 公共樣式
+
+// 頁面連結
+// 當前狀態
+.current{
+    color: #c69000;
+}
+a:hover{
+    color: #c69000;
+}
+
+
+.circle-1{
+    margin: 0 5px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    border: 1px solid #c69000;
+    color: #c69000;
+}
+
+
+.right-arrow{
+    margin: 12px;
+    font-size: 24px;
+    &:hover{
+        color: #ffffff;
+    }
+}
+
+// 減少行數之後要改
+// 圖標-圓-黃
+@mixin icon-r-y-40{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    border: 1px solid #c69000;
+    color: #c69000;
+    text-align: center;
+    line-height: 40px;   
+}     
+
+//文字-白底
+// @mixin txt-bc-w{
+//     padding: 20px 10px;
+//     letter-spacing:10px;
+//     background-color: rgba(255, 255, 255, 0.5);
+//     text-align: center;
+//     line-height: 60px;
+//     font-size: 20px;
+// }
+
+.txt-bc-w{
+        padding: 20px 10px;
+        letter-spacing:10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        line-height: 60px;
+        font-size: 20px;
+    }
+
+
+
+
+//a連結-白底框
+@mixin a-bc-w{
+
+}
+
+
+
+@import "reset";
+/*清空預設*/
+@import "slick"; 
+@import "slick_theme";
+/*輪播庫*/
+
+/*
+    外部結束
+*/
+@import "header_footer";
+@import "index";
+@import "about";
+
