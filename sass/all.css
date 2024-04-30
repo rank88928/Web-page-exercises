@@ -1125,7 +1125,8 @@ a {
 .car-btn-box {
   margin-top: 40px;
 }
-.car-btn-box > .arrow-prev, .car-btn-box .arrow-next {
+.car-btn-box > .arrow-prev,
+.car-btn-box .arrow-next {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -1133,7 +1134,8 @@ a {
   border: 1px solid #bdbdbd;
   background-color: #fff;
 }
-.car-btn-box > .arrow-prev:hover, .car-btn-box .arrow-next:hover {
+.car-btn-box > .arrow-prev:hover,
+.car-btn-box .arrow-next:hover {
   border: 1px solid #c69000;
 }
 .car-btn-box > .arrow-prev::after {
@@ -1143,36 +1145,225 @@ a {
   content: "→";
 }
 
-.process-container, .quality-container {
+.process-container,
+.quality-container {
   display: flex;
   width: 80%;
   height: 420px;
 }
-.process-container .card, .quality-container .card {
+.process-container .card,
+.quality-container .card {
   padding: 20px;
   border: none;
 }
-.process-container .card > .img, .quality-container .card > .img {
+.process-container .card > .img,
+.quality-container .card > .img {
   width: 175px;
   margin: 0 auto;
 }
-.process-container .card > .img > img, .quality-container .card > .img > img {
+.process-container .card > .img > img,
+.quality-container .card > .img > img {
   width: 100%;
   border-radius: 50%;
 }
-.process-container .card > .txt, .quality-container .card > .txt {
+.process-container .card > .txt,
+.quality-container .card > .txt {
   width: 260px;
 }
-.process-container .card > .txt > h3, .quality-container .card > .txt > h3 {
+.process-container .card > .txt > h3,
+.quality-container .card > .txt > h3 {
   font-size: 20px;
 }
-.process-container .card > .txt > h3 > samp, .quality-container .card > .txt > h3 > samp {
+.process-container .card > .txt > h3 > samp,
+.quality-container .card > .txt > h3 > samp {
   margin-right: 20px;
   font-size: 40px;
   color: #c69000;
 }
-.process-container .card > .txt > p, .quality-container .card > .txt > p {
+.process-container .card > .txt > p,
+.quality-container .card > .txt > p {
   margin-top: 20px;
   font-size: 16px;
   line-height: 24px;
+}
+
+.shop {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.shop > .card {
+  width: 25%;
+  padding: 0 25px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+.shop > .card .img {
+  width: 80%;
+  margin: auto;
+}
+.shop > .card .img img {
+  width: 100%;
+}
+.shop > .card .txt {
+  width: 100%;
+  margin-top: 20px;
+}
+.shop > .card .txt h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.shop > .card .txt p {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.recipes {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.recipes > .card {
+  width: 50%;
+}
+.recipes > .card .img img {
+  width: 100%;
+  height: 100%;
+}
+.recipes > .card .txt {
+  display: flex;
+  background-color: #eeeeee;
+  line-height: 24px;
+}
+.recipes > .card .txt .introduce-box {
+  padding: 30px;
+  box-sizing: border-box;
+}
+.recipes > .card .txt .introduce-box h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.recipes > .card .txt .introduce-box p {
+  font-size: 14px;
+}
+.recipes > .card .txt .link-box {
+  padding: 30px 15px;
+  box-sizing: border-box;
+  font-size: 24px;
+  position: relative;
+}
+.recipes > .card .txt .link-box::after {
+  position: absolute;
+  content: "";
+  width: 85%;
+  border-top: 1px solid #c69000;
+  top: 50%;
+  left: 10%;
+}
+.recipes > .card .txt .link-box i {
+  color: #c69000;
+  margin: 0 15px;
+}
+.recipes > .card .txt .link-box a {
+  display: block;
+  font-size: 16px;
+  margin-left: 60%;
+  margin-top: 50px;
+}
+.recipes .card:nth-child(1) {
+  height: 100%;
+}
+.recipes .card:nth-child(1) .img {
+  width: 100%;
+  height: 75%;
+}
+.recipes .card:nth-child(1) .txt {
+  width: 100%;
+  height: 25%;
+}
+.recipes .card:nth-child(1) .txt .introduce-box {
+  width: 50%;
+  height: 100%;
+}
+.recipes .card:nth-child(1) .txt .link-box {
+  width: 50%;
+  height: 100%;
+}
+.recipes .card:nth-child(2),
+.recipes .card:nth-child(3) {
+  display: flex;
+  height: 50%;
+}
+.recipes .card:nth-child(2) .img,
+.recipes .card:nth-child(3) .img {
+  width: 50%;
+  height: 100%;
+}
+.recipes .card:nth-child(2) .txt,
+.recipes .card:nth-child(3) .txt {
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+.recipes .card:nth-child(2) .txt .introduce-box,
+.recipes .card:nth-child(3) .txt .introduce-box {
+  width: 100%;
+  height: 50%;
+}
+.recipes .card:nth-child(2) .txt .link-box,
+.recipes .card:nth-child(3) .txt .link-box {
+  width: 100%;
+  height: 50%;
+}
+.recipes .card:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+.page-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+.page-box a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #c69000;
+  color: #c69000;
+  text-align: center;
+  line-height: 40px;
+  margin: 10px;
+  color: #000;
+}
+.page-box a:hover {
+  color: #ffffff;
+  background-color: #c69000;
+}
+.page-box a i {
+  font-size: 16px;
+}
+
+.location {
+  width: 100%;
+  display: flex;
+}
+.location .item {
+  display: block;
+  width: 20%;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+.location .item img {
+  width: 100%;
+}
+.location .item h3 {
+  margin-top: 15px;
 }/*# sourceMappingURL=all.css.map */
