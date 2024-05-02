@@ -469,3 +469,117 @@
     }
 
 }
+
+
+
+//最新消息
+.news {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    >.card {
+        width: 30%;
+        box-sizing: border-box;
+        background-color: #fff;
+        margin-bottom: 60px;
+
+        .img {
+            width: 100%;
+            height: 250px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .txt {
+            padding: 15px 15px 30px 15px;
+            font-size: 16px;
+
+            .time {
+
+                color: #c69000;
+            }
+
+            h3 {
+                font-size: 20px;
+                margin: 15px 0;
+            }
+
+            p {
+                padding-bottom: 20px;
+                border-bottom: 1px solid #000;
+            }
+        }
+
+        a {
+            margin-top: 30px;
+            display: block;
+            text-align: end;
+        }
+
+    }
+}
+
+
+//聯絡我們
+.contact-txt {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 20px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .question,
+    .sex {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .name,
+    .telephone,
+    .mobile-phone,
+    .email,
+    .message {
+        display: flex;
+        flex-wrap: wrap;
+        width: 48%;
+        margin-bottom: 20px;
+
+        input {
+            width: 100%;
+        }
+    }
+
+    .message {
+        width: 100%;
+    }
+
+    #message {
+        width: 100%;
+    }
+
+    .name,
+    .email,
+    .message {
+        &::before {
+            content: "※";
+            color: #ff0000;
+        }
+    }
+
+    button {
+        border: 1px solid #c69000;
+        width: 200px;
+        height: 60px;
+        background-color: #fff;
+    }
+}

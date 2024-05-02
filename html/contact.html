@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="header"></div>
+
+
+    <div class="wrap">
+        <div class="top-container">
+            <div class="logo">
+                <img src="/img/logo.svg" alt="">
+            </div>
+            <div class="bk">
+                <img src="/img/twL_banner_ins_23K06_n5iy46rb4z.jpg" alt="">
+            </div>
+            <div class="about">
+                <samp>農家人</samp><br>
+                <samp>細細追求稻米品質</samp><br>
+                <samp>更尊重，生生不息的</samp><br>
+                <samp>大地之美</samp>
+            </div>
+        </div>
+
+
+        <div class="main">
+            <div class="title-container">
+                <div class="title">
+                    <h2 class="en">CONTACT US</h2>
+                    <h2 class="tw">聯絡我們</h2>
+                    <samp>源自花東縱谷 | 食在安心嚴選</samp>
+                </div>
+                <div class="page-nav">
+                    <div class="breadcrumbs">
+                        <a href="">首頁</a>
+                        <samp>/</samp>
+                        聯絡我們
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <p class="contact-txt">
+                    客服專線：02-77300205<br>
+                    客服信箱：hq@lohas-rice.com<br>
+                    我們歡迎您透過本信件表單進行產品與服務諮詢，也歡迎您寫下相關的購買心得與建議<br>
+                    您的鼓勵是我們成長的動力，所有的問題我們都會盡快回覆給您，謝謝!<br>
+                    同時也非常歡您利用Line@ 官方即時通訊與我們聯繫。<br>
+                </p>
+                <form action="">
+                    <ul class="contact-form">
+                        <li class="question">
+                            問題分類
+                            <select id="question" name="question">
+                                <option value="">請選擇分類</option>
+                                <option value="產品諮詢">產品諮詢</option>
+                                <option value="購買心得建議">購買心得建議</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </li>
+                        <li class="sex">
+                            <label>
+                                <input type="radio" name="sex" value="0" checked>先生
+                            </label>
+                            <label>
+                                <input type="radio" name="sex" value="1">小姐
+                            </label>
+                        </li>
+                        <li class="name">
+                            <label for="data_name">姓名</label>
+                            <input type="text" name="data_name" id="data_name">
+                        </li>
+                        <li class="telephone">
+                            <label for="data_telephone">連絡電話</label>
+                            <input type="text" name="data_telephone" id="data_telephone">
+                        </li>
+                        <li class="mobile-phone">
+                            <label for="data_mobile_phone">行動電話</label>
+                            <input type="text" name="data_mobile_phone" id="data_mobile_phone">
+                        </li>
+                        <li class="email">
+                            <label for="data_email">電子信箱</label>
+                            <input type="email" name="data_email" id="data_email">
+                        </li>
+                        <li class="message">
+                            <label for="message">需求說明</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </li>
+                        <button type="submit" class="btn-submit">確認送出</button>
+                    </ul>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+
+    <script>
+        $(".header").load("header.html");
+        $(".footer").load("footer.html");
+    </script>
+</body>
+
+</html>

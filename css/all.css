@@ -99,15 +99,18 @@ a {
   position: relative;
   display: block;
   box-sizing: border-box;
-  -webkit-user-select: none; /* 禁止選擇文本 */
+  -webkit-user-select: none;
+  /* 禁止選擇文本 */
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-touch-callout: none; /* 禁止長按顯示選項 */
+  -webkit-touch-callout: none;
+  /* 禁止長按顯示選項 */
   -khtml-user-select: none;
   -ms-touch-action: pan-y;
   touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent; /* 點擊時取消默認高亮顏色 */
+  -webkit-tap-highlight-color: transparent;
+  /* 點擊時取消默認高亮顏色 */
 }
 
 /*容器-可視區*/
@@ -120,12 +123,15 @@ a {
 }
 
 .slick-list:focus {
-  outline: none; /* 獲取焦點時取消預設外框 */
+  outline: none;
+  /* 獲取焦點時取消預設外框 */
 }
 
 .slick-list.dragging {
-  cursor: pointer; /* 拖拽時顯示手型光標 */
-  cursor: hand; /* 兼容IE */
+  cursor: pointer;
+  /* 拖拽時顯示手型光標 */
+  cursor: hand;
+  /* 兼容IE */
 }
 
 .slick-slider .slick-track,
@@ -140,12 +146,12 @@ a {
 
 /* 容器-移動區域 */
 .slick-track {
-  position: relative; /* 相對定位 */
-  top: 0; /* 上邊距 */
-  left: 0; /* 左邊距 */
-  display: block; /* 块級元素 */
-  margin-left: auto; /* 左邊距自動 */
-  margin-right: auto; /* 右邊距自動 */
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slick-track:before,
@@ -155,52 +161,60 @@ a {
 }
 
 .slick-track:after {
-  clear: both; /* 清除浮動 */
+  clear: both;
+  /* 清除浮動 */
 }
 
 .slick-loading .slick-track {
-  visibility: hidden; /* 隱藏 */
+  visibility: hidden;
+  /* 隱藏 */
 }
 
 .slick-slide {
-  display: none; /* 隱藏 */
-  float: left; /* 左浮動 */
-  height: 100%; /* 高度100% */
-  min-height: 1px; /* 最小高度1像素 */
+  display: none;
+  /* 隱藏 */
+  float: left;
+  height: 100%;
+  min-height: 1px;
 }
 
 [dir=rtl] .slick-slide {
-  float: right; /* 右浮動 */
+  float: right;
+  /* 右浮動 */
 }
 
 .slick-slide img {
-  display: block; /* 块級元素 */
+  display: block;
 }
 
 .slick-slide.slick-loading img {
-  display: none; /* 隱藏 */
+  display: none;
+  /* 隱藏 */
 }
 
 .slick-slide.dragging img {
-  pointer-events: none; /* 禁用鼠標事件 */
+  pointer-events: none;
+  /* 禁用鼠標事件 */
 }
 
 .slick-initialized .slick-slide {
-  display: block; /* 块級元素 */
+  display: block;
 }
 
 .slick-loading .slick-slide {
-  visibility: hidden; /* 隱藏 */
+  visibility: hidden;
+  /* 隱藏 */
 }
 
 .slick-vertical .slick-slide {
-  display: block; /* 块級元素 */
-  height: auto; /* 自動高度 */
-  border: 1px solid transparent; /* 透明邊框 */
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+  /* 透明邊框 */
 }
 
 .slick-arrow.slick-hidden {
-  display: none; /* 隱藏 */
+  display: none;
 }
 
 /* 設置文件字符集為 UTF-8 */
@@ -1366,4 +1380,265 @@ a {
 }
 .location .item h3 {
   margin-top: 15px;
+}
+
+.news {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.news > .card {
+  width: 30%;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 60px;
+}
+.news > .card .img {
+  width: 100%;
+  height: 250px;
+}
+.news > .card .img img {
+  width: 100%;
+  height: 100%;
+}
+.news > .card .txt {
+  padding: 15px 15px 30px 15px;
+  font-size: 16px;
+}
+.news > .card .txt .time {
+  color: #c69000;
+}
+.news > .card .txt h3 {
+  font-size: 20px;
+  margin: 15px 0;
+}
+.news > .card .txt p {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #000;
+}
+.news > .card a {
+  margin-top: 30px;
+  display: block;
+  text-align: end;
+}
+
+.contact-txt {
+  font-size: 20px;
+  line-height: 30px;
+  margin: 20px 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contact-form .question,
+.contact-form .sex {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contact-form .name,
+.contact-form .telephone,
+.contact-form .mobile-phone,
+.contact-form .email,
+.contact-form .message {
+  display: flex;
+  flex-wrap: wrap;
+  width: 48%;
+  margin-bottom: 20px;
+}
+.contact-form .name input,
+.contact-form .telephone input,
+.contact-form .mobile-phone input,
+.contact-form .email input,
+.contact-form .message input {
+  width: 100%;
+}
+.contact-form .message {
+  width: 100%;
+}
+.contact-form #message {
+  width: 100%;
+}
+.contact-form .name::before,
+.contact-form .email::before,
+.contact-form .message::before {
+  content: "※";
+  color: #ff0000;
+}
+.contact-form button {
+  border: 1px solid #c69000;
+  width: 200px;
+  height: 60px;
+  background-color: #fff;
+}
+
+/*登入頁樣式*/
+.login {
+  width: 90%;
+  height: 620px;
+  background-color: #fff;
+  display: flex;
+  margin: auto;
+  box-shadow: 0px 0px 15px 0px rgba(4, 4, 4, 0.1);
+  position: relative;
+}
+.login::after, .login::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login::after {
+  content: "OR";
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 50px;
+}
+.login::before {
+  content: "";
+  border-left: 1px solid #000000;
+  height: 70%;
+}
+
+.login-box,
+.third-party-box {
+  padding: 90px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-box {
+  justify-content: space-around;
+}
+
+.login-box > h2 {
+  font-size: 24px;
+}
+.login-box > h2 samp {
+  font-size: 30px;
+  color: #c69000;
+}
+.login-box > p {
+  font-size: 20px;
+  line-height: 40px;
+}
+.login-box > .btn-box {
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+}
+.login-box > .btn-box a:nth-child(1) {
+  margin-right: 10px;
+}
+.login-box > .btn-box a:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  height: 80%;
+  border: 1px solid #000000;
+  left: 70px;
+}
+
+.account-box,
+.password-box {
+  position: relative;
+}
+.account-box .loginbar,
+.password-box .loginbar {
+  margin: 25px 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000000;
+  position: relative;
+  outline: none;
+}
+.account-box .loginbar:focus,
+.password-box .loginbar:focus {
+  border-bottom: 1px solid #c69000;
+}
+.account-box label,
+.password-box label {
+  position: absolute;
+  top: 20px;
+  transition: 0.3s ease;
+}
+
+.loginbar:focus + label {
+  top: 0;
+}
+
+.login-member {
+  background-color: #c69000;
+  border: none;
+}
+
+.regsiter {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+.regsiter a {
+  color: #c69000;
+  text-decoration: underline;
+}
+
+.login-button {
+  display: block;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  margin: 20px 0;
+  line-height: 50px;
+}
+.login-button:hover {
+  color: #fff;
+  box-shadow: 0px 0px 15px 0px rgba(4, 4, 4, 0.5);
+  transition: transform 0.5s ease;
+  transform: translateY(-5px);
+}
+
+.login-fb {
+  background-color: #3b5781;
+}
+
+.login-line {
+  background-color: #00b900;
+}
+
+.shopping-box-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopping-box {
+  width: 480px;
+  min-height: 300px;
+  background-color: #fff;
+  position: relative;
+}
+.shopping-box .closure {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #c69000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }/*# sourceMappingURL=all.css.map */
