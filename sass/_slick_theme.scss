@@ -1,21 +1,20 @@
-@charset 'UTF-8'; /* 設置文件字符集為 UTF-8 */
+@charset 'UTF-8'; //設置文件字符集為 UTF-8
 
-
+//載入時顯示 AJAX loader 圖示
 .slick-loading .slick-list {
-    /* 在載入時顯示 AJAX loader 圖示 */
     background: #fff url('./ajax-loader.gif') center center no-repeat;
 }
 
-/* Icons 字體設定 */
+//Icons 字體設定
 @font-face {
-    font-family: 'slick'; /* 定義字體家族為 slick */
+    font-family: 'slick'; //定義字體家族為 slick
     font-weight: normal;
     font-style: normal;
-    src: url('./fonts/slick.eot'); /* 字體路徑 */
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), /* 兼容 IE */
-         url('./fonts/slick.woff') format('woff'), /* 兼容現代瀏覽器 */
-         url('./fonts/slick.ttf') format('truetype'), /* 兼容 Safari, Android, iOS */
-         url('./fonts/slick.svg#slick') format('svg'); /* 兼容老版本 iOS */
+    src: url('./fonts/slick.eot'); //字體路徑
+    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), //兼容 IE
+        url('./fonts/slick.woff') format('woff'), //兼容現代瀏覽器
+        url('./fonts/slick.ttf') format('truetype'), //兼容 Safari, Android, iOS
+        url('./fonts/slick.svg#slick') format('svg'); //兼容老版本 iOS
 }
 
 /* 箭頭樣式-共通 */
@@ -96,13 +95,15 @@
 
 
 
-/* 圓點指示器 */
-.slick-dotted.slick-slider {
-    margin-bottom: 30px; /* 圓點底部間距 */
-}
+//圓點指示器
+// .slick-dotted.slick-slider {
+//     margin-bottom: 30px;
+// }
+
+//圓點指示器位置
 .slick-dots {
     position: absolute;
-    bottom: -25px; /* 圓點指示器位置 */
+    bottom: -25px;
     display: block;
     width: 100%;
     padding: 0;
@@ -110,15 +111,19 @@
     list-style: none;
     text-align: center;
 }
+
+//圓點間距
 .slick-dots li {
     position: relative;
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin: 0 5px; /* 圓點間距 */
+    margin: 0 5px;
     padding: 0;
     cursor: pointer;
 }
+
+//圓點按鈕
 .slick-dots li button {
     font-size: 0;
     line-height: 0;
@@ -132,16 +137,21 @@
     outline: none;
     background: transparent;
 }
+
+//聚焦效果取消
 .slick-dots li button:hover,
 .slick-dots li button:focus {
     outline: none;
 }
+
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before {
     opacity: 1;
 }
+
+//樣式
 .slick-dots li button:before {
-    font-family: 'slick'; /* 使用定義的字體 */
+    font-family: 'slick'; //使用定義的字體
     font-size: 6px;
     line-height: 20px;
     position: absolute;
@@ -151,12 +161,14 @@
     height: 20px;
     content: '•';
     text-align: center;
-    opacity: .25; /* 圓點透明度 */
-    color: black; /* 圓點顏色 */
+    opacity: .25;
+    color: black;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+//當前索引時
 .slick-dots li.slick-active button:before {
-    opacity: .75; /* 活動狀態的圓點透明度 */
-    color: black; /* 活動狀態的圓點顏色 */
+    opacity: .75;
+    color: black;
 }

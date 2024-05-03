@@ -1,4 +1,7 @@
 .shopping-box-mask {
+
+    display: none !important;
+
     width: 100%;
     height: 100%;
     position: fixed;
@@ -15,6 +18,10 @@
     min-height: 300px;
     background-color: #fff;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .closure {
         position: absolute;
@@ -27,4 +34,24 @@
         border: none;
         cursor: pointer;
     }
+}
+
+.select-qty {
+    margin: 20px 0;
+    font-size: 18px;
+
+    .qty {
+        font-size: 28px;
+        color: #c69000;
+        margin: 0 5px;
+    }
+}
+
+.checkout {
+    width: 200px;
+    height: 40px;
+    background-color: #c69000;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
 }

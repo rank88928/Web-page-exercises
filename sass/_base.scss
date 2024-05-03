@@ -1,0 +1,226 @@
+// 統一設定
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%;
+}
+
+
+// 通用版面
+
+// 頂部圖片
+.wrap {
+    background-image: url("/img/main_bg.png");
+    scroll-behavior: smooth;
+
+    >.top-container {
+        position: relative;
+
+        >.logo {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: 45px;
+            left: 45px;
+        }
+
+        >.bk {
+            >img {
+                height: 450px;
+            }
+        }
+
+        >.about {
+            position: absolute;
+            top: 80px;
+            right: 300px;
+            color: #000;
+            writing-mode: vertical-rl;
+
+            samp {
+                @extend .txt-bc-w;
+            }
+        }
+    }
+}
+
+//內容橫向大小
+.main {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+// 內容-頁面標題區
+.title-container {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    letter-spacing: 3px;
+    font-size: 16px;
+
+    >.title {
+        margin-bottom: 30px;
+
+        >.en {
+            font-size: 40px;
+        }
+
+        >.tw {
+            font-size: 24px;
+            margin: 20px 0 30px 0;
+            font-weight: 700
+        }
+    }
+}
+
+//麵包屑
+.page-nav {
+    >.breadcrumbs {
+        font-size: 16px;
+        text-align: end;
+    }
+
+    >ul {
+        display: flex;
+        margin-top: 100px;
+
+        >li {
+            margin: 0 10px;
+        }
+
+        >li:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+// 消息卡片
+.news-card {
+    box-sizing: border-box;
+    background-color: #fff;
+    margin-bottom: 60px;
+
+    .img {
+        height: 250px;
+    }
+
+    .txt {
+        padding: 15px 15px 30px 15px;
+        font-size: 16px;
+
+        h3 {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+    }
+
+    a {
+        border-top: 1px solid #000;
+        padding-top: 20px;
+        margin-top: 20px;
+        display: block;
+        text-align: end;
+    }
+}
+
+
+
+
+// 頁面連結
+
+// 當前狀態
+.current,
+//標亮
+.mark-bright,
+//連結焦點
+a:hover {
+    color: #c69000;
+}
+
+
+
+.right-arrow {
+    margin: 12px;
+    font-size: 24px;
+
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+// 減少行數之後要改
+
+// 圖標-圓圈-黃
+@mixin icon-r-y-40 {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #c69000;
+    color: #c69000;
+    text-align: center;
+    line-height: 40px;
+}
+
+.circle-1 {
+    margin: 0 5px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #c69000;
+    color: #c69000;
+}
+
+
+
+//文字-白底方框
+.txt-bc-w {
+    padding: 20px 10px;
+    letter-spacing: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+}
+
+// 點擊方框 白底黃邊
+.sty-box-1 {
+    font-size: 18px;
+    display: block;
+    width: 180px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #c69000;
+}
+
+// 輪播按鈕
+.arrow-prev,
+.arrow-next {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 10px;
+    border: 1px solid #bdbdbd;
+    background-color: #fff;
+
+    &:hover {
+        border: 1px solid #c69000;
+    }
+}
+
+.arrow-prev::after {
+    content: "←";
+}
+
+.arrow-next::after {
+    content: "→";
+}

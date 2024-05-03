@@ -1,7 +1,7 @@
 
 
-
-$(document).ready(function(){
+// 首頁背景
+$(document).ready(function () {
     $('.carousel-content').slick({
         arrows: false,
         dots: true,
@@ -9,24 +9,34 @@ $(document).ready(function(){
         speed: 500,
         fade: true,
         cssEase: 'linear',
-        autoplay: true, 
+        // autoplay: true,
         autoplaySpeed: 2000,
     });
 });
+// 商品
 $('.product-container').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 2000,
-    arrows: true,
+    arrows: false,
 });
+$('.commodity-prev').click(function () {
+    $('.product-container').slick('slickPrev');
+});
+$('.commodity-next').click(function () {
+    $('.product-container').slick('slickNext');
+});
+
+
+// 雙輪動
 $('.news-container-a').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: true,
     asNavFor: '.news-container-b',
-    autoplay: true, 
+    // autoplay: true,
     autoplaySpeed: 2000,
 });
 $('.news-container-b').slick({
@@ -41,31 +51,31 @@ $('.news-container-b').slick({
 
 //嚴選品質輪播
 //流程
-$('.process-container').slick({
+$('.process-carousel').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    arrows:false,
+    arrows: false,
 });
-$('.process-prev').click(function(){
-    $('.process-container').slick('slickPrev');
+$('.process-prev').click(function () {
+    $('.process-carousel').slick('slickPrev');
 });
-$('.process-next').click(function(){
-    $('.process-container').slick('slickNext');
+$('.process-next').click(function () {
+    $('.process-carousel').slick('slickNext');
 });
 
 //品質
-$('.quality-container').slick({
+$('.quality-carousel').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    arrows:false,
+    arrows: false,
 });
-$('.quality-prev').click(function(){
-    $('.quality-container').slick('slickPrev');
+$('.quality-prev').click(function () {
+    $('.quality-carousel').slick('slickPrev');
 });
-$('.quality-next').click(function(){
-    $('.quality-container').slick('slickNext');
+$('.quality-next').click(function () {
+    $('.quality-carousel').slick('slickNext');
 });
