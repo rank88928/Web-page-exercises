@@ -20,14 +20,14 @@
     </div>
 
     <div class="last-nav">
-        <a href="/html/about.html">關於樂米穀場</a>
-        <a href="/html/quality.html">嚴選品質</a>
-        <a href="/html/shop.html">線上購物</a>
-        <a href="/html/resume.html">食安履歷</a>
-        <a href="/html/recipes.html">料理食譜</a>
-        <a href="/html/location.html">銷售通路</a>
-        <a href="/html/news.html">最新消息</a>
-        <a href="/html/contact.html">聯絡我們</a>
+        <a href="html/about.html">關於樂米穀場</a>
+        <a href="html/quality.html">嚴選品質</a>
+        <a href="html/shop.html">線上購物</a>
+        <a href="html/resume.html">食安履歷</a>
+        <a href="html/recipes.html">料理食譜</a>
+        <a href="html/location.html">銷售通路</a>
+        <a href="html/news.html">最新消息</a>
+        <a href="html/contact.html">聯絡我們</a>
     </div>
     <a href="#main-index" class="back-top">scroll top</a>
 
@@ -67,13 +67,12 @@
     let back_top = document.querySelector(".back-top");
     let main_index = document.querySelector(".main-index");
 
-    // back_top.addEventListener("click", function () {
-    //     main_index.scrollIntoView(
-    //         { behavior: "smooth" }
-    //     );
-
-    // });
-
+    back_top.addEventListener("click", function () {
+        main_index.scrollIntoView(
+            { behavior: "smooth" }
+        );
+        console.log("1");
+    });
 </script>
 
 </html>
