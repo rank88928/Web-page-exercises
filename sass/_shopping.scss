@@ -1,7 +1,4 @@
 .shopping-box-mask {
-
-    display: none !important;
-
     width: 100%;
     height: 100%;
     position: fixed;
@@ -11,7 +8,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 99;
 }
+
+.mask-close {
+    display: none;
+}
+
+
 
 .shopping-box {
     width: 480px;
@@ -54,4 +58,8 @@
     color: #fff;
     line-height: 40px;
     text-align: center;
+
+    &:hover {
+        color: #fff;
+    }
 }

@@ -10,13 +10,15 @@
 <body>
     <div class="txt">
         <div class="contact-us">客服專線:02-77300205 客服信箱:hq@lohas-rice.com</div>
-        <!-- 改標籤 -->
-        <div class="social-links">
-            <a class="" href=""><i class="fa-brands fa-facebook-f"></i></a>
-            <a class="" href="/html/member/login.html"><i class="fa-solid fa-user"></i></a>
-            <a class="" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+
+        <div class="user-service">
+            <a class="item" href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="item" href="/html/member/login.html"><i class="fa-solid fa-user"></i></a>
+            <a class="item" href="#shop" id="shopping-box-open"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
+
     </div>
+
     <div class="last-nav">
         <a href="/html/about.html">關於樂米穀場</a>
         <a href="/html/quality.html">嚴選品質</a>
@@ -27,9 +29,51 @@
         <a href="/html/news.html">最新消息</a>
         <a href="/html/contact.html">聯絡我們</a>
     </div>
-    <a class="back-top">scroll top</a>
+    <a href="#main-index" class="back-top">scroll top</a>
 
 
+
+    <div class="shopping-box-mask mask-close">
+        <div class="shopping-box">
+            <button class="closure">X</button>
+            <div class="select-qty">您的購物車總計<samp class="qty">0</samp>件商品</div>
+            <div class="commodity-box">
+
+            </div>
+            <a href="" class="checkout">前往結帳</a>
+
+        </div>
+    </div>
 </body>
+
+<script>
+
+    let shopping_open = document.querySelector("#shopping-box-open");
+    let shopping_box_close = document.querySelector(".closure");
+    let shopping_box_mask = document.querySelector(".shopping-box-mask");
+
+    shopping_open.addEventListener("click", function () {
+        shopping_box_mask.classList.remove("mask-close");
+        document.body.classList.add("no-scroll");
+
+    })
+
+    shopping_box_close.addEventListener("click", function () {
+        shopping_box_mask.classList.add("mask-close");
+        document.body.classList.remove("no-scroll");
+    })
+
+    // 定點滑動
+    let back_top = document.querySelector(".back-top");
+    let main_index = document.querySelector(".main-index");
+
+    // back_top.addEventListener("click", function () {
+    //     main_index.scrollIntoView(
+    //         { behavior: "smooth" }
+    //     );
+
+    // });
+
+</script>
 
 </html>

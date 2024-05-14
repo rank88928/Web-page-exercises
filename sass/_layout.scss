@@ -1,0 +1,180 @@
+// 固定側邊欄
+.menu {
+    position: fixed;
+    right: -500px;
+    width: 400px;
+    height: 1000px;
+    background-color: #f2ebeb;
+    background-image: url(/img/main_bg.png);
+    z-index: 99;
+    opacity: 0.1;
+    display: flex;
+    transition: ease 0.5s;
+}
+
+.menu-open {
+    right: 0px;
+    opacity: 1;
+}
+
+// 開關按鈕共通
+.menu-open-btn,
+.menu-closure-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    // font-size: 30px;
+
+    &::after {
+        color: #000;
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+}
+
+// 打開鈕
+.menu-open-btn {
+    z-index: 5;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+
+    &::after {
+        content: "meun";
+    }
+}
+
+//關閉鈕
+.menu-closure-btn {
+    position: absolute;
+    top: 0px;
+    right: -60px;
+
+    &::after {
+        content: "close";
+    }
+}
+
+
+
+
+// 導航選單
+.top-nav {
+    margin: 50px 20px;
+    position: relative;
+
+    .contact-us {
+        width: 270px;
+        padding: 10px 0px;
+        border-bottom: 3px solid #000000;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        margin-top: 50px;
+
+        a {
+            font-size: 20px;
+            margin: 15px 0;
+
+            &:hover {
+                color: #c69000;
+            }
+        }
+    }
+
+    .copyright {
+        position: absolute;
+        top: 100px;
+        left: 320px;
+        writing-mode: vertical-rl;
+        height: 250px;
+        font-size: 14px;
+    }
+}
+
+// 頁頭結束
+
+
+
+
+
+// 頁尾
+.footer {
+    height: 400px;
+    padding: 0 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .txt {
+        display: flex;
+        margin-top: 90px;
+        justify-content: space-between;
+        width: 80%;
+
+        .contact-us {
+            padding-bottom: 40px;
+        }
+    }
+}
+
+// 使用者功能
+.user-service {
+    display: flex;
+
+    @media screen and (max-width:992px) {
+        position: fixed;
+        bottom: 0px;
+        width: 101VW;
+        left: 0;
+
+    }
+
+    a {
+        @include icon-r-y-40;
+        margin: 0 15px;
+    }
+
+    .item {
+        @media screen and (max-width:992px) {
+            border: 1px solid #c69000;
+            border-radius: 0%;
+            margin: 0;
+            width: 33%;
+            background-color: #fff;
+        }
+    }
+}
+
+
+
+.last-nav {
+    padding-top: 40px;
+    border-top: 2px solid #000;
+    width: 80%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+
+    @media screen and (max-width:768px) {
+        display: none;
+    }
+
+    a {
+        margin: 0 10px;
+    }
+}
+
+.back-top {
+    margin-top: 100px;
+    width: 70%;
+    text-align: center;
+    scroll-behavior: smooth;
+}

@@ -1,6 +1,6 @@
 
 
-// 首頁背景
+// 首頁背景輪撥
 $(document).ready(function () {
     $('.carousel-content').slick({
         arrows: false,
@@ -13,14 +13,47 @@ $(document).ready(function () {
         autoplaySpeed: 2000,
     });
 });
-// 商品
+
+
+//首頁優勢輪撥
+$('.advantage-container').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    arrows: false
+});
+
+let advantage_i = document.querySelectorAll(".index-advantage ul li");
+
+advantage_i.forEach(function (li, index) {
+    li.addEventListener("click", function () {
+        $('.advantage-container').slick('slickGoTo', index);
+    });
+});
+
+
+
+
+
+// 首頁商品輪撥
 $('.product-container').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     // autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
+
+    responsive: [{ // 定義響應式設置
+        breakpoint: 992, // 媒體查詢斷點
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+        }
+    }]
 });
+
 $('.commodity-prev').click(function () {
     $('.product-container').slick('slickPrev');
 });
@@ -29,7 +62,9 @@ $('.commodity-next').click(function () {
 });
 
 
-// 雙輪動
+
+
+// 首頁雙輪動
 $('.news-container-a').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -49,7 +84,8 @@ $('.news-container-b').slick({
 });
 
 
-//嚴選品質輪播
+
+//嚴選品質-輪播
 //流程
 $('.process-carousel').slick({
     slidesToShow: 3,
@@ -79,3 +115,6 @@ $('.quality-prev').click(function () {
 $('.quality-next').click(function () {
     $('.quality-carousel').slick('slickNext');
 });
+
+
+

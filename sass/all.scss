@@ -1,15 +1,16 @@
+// 清除預設
 @import "reset";
-/*清空預設*/
 
-// 輪播庫開始
+
+// 第三方
 @import "slick";
 @import "slick_theme";
-/*輪播庫結束*/
 
-/*統一樣式開始*/
+
+// 全局樣式
 @import "base";
-/*統一樣式結束*/
-@import "header_footer";
+
+@import "layout";
 @import "index";
 @import "about";
 @import "member";

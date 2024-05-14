@@ -2,7 +2,7 @@
 <html lang="en">
 
 <body>
-    <div class="menu-btn">打開</div>
+    <div class="menu-open-btn">打開</div>
     <div class="menu">
         <div class="top-nav">
             <div class="contact-us">客服專線:02-77300205<br>客服信箱:hq@lohas-rice.com</div>
@@ -16,23 +16,29 @@
                 <a href="/html/news.html">最新消息</a>
                 <a href="/html/contact.html">聯絡我們</a>
             </div>
-            <div class="closure-btn"><i class="fa-solid fa-xmark"></i></div>
+            <div class="menu-closure-btn"><i class="fa-solid fa-xmark"></i></div>
             <div class="copyright">Copyright© 2024 Lohas Rice. All Rights Reserved</div>
         </div>
     </div>
 
 
-    <div class="shopping-box-mask">
-        <div class="shopping-box">
-            <button class="closure">X</button>
-            <div class="select-qty">您的購物車總計<samp class="qty">0</samp>件商品</div>
-            <div class="commodity-box">
+    <script>
+        let menu_opens = document.querySelector(".menu-open-btn");
+        let menu_closure = document.querySelector(".menu-closure-btn");
+        let menu = document.querySelector(".menu");
 
-            </div>
-            <a href="" class="checkout">前往結帳</a>
+        menu_opens.addEventListener("click", function () {
+            menu.classList.add("menu-open");
+        });
 
-        </div>
-    </div>
+        menu_closure.addEventListener("click", function () {
+            menu.classList.remove("menu-open");
+        });
+
+
+
+
+    </script>
 </body>
 
 </html>
