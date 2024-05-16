@@ -47,13 +47,12 @@
                     <img src="img/index_0004.jpg" alt="">
                 </div>
             </div>
-            <!-- 旋轉圖示 -->
-            <div class="move-icon">
-                <a class="move-icon-a" href="">
-                    <samp class="dot"></samp>
-                    <samp class="next"></samp>
-                </a>
-            </div>
+
+            <a class="move-icon-a" href="#index-learn-more">
+                <samp class="dot"></samp>
+                <samp class="next"></samp>
+            </a>
+
         </div>
 
         <!-- 了解更多 -->
@@ -113,8 +112,9 @@
                 <div class="txt">
                     <h2 class="en">OUR<br>FEATURES</h2>
                     <h2 class="tw">樂米穀場優勢</h2>
+
                     <ul>
-                        <li>
+                        <li class="advantage-current">
                             <samp>01</samp>
                             <h3>得天獨厚的純淨自然的稻作環境</h3>
                             <samp class="icon"><i class="fa-solid fa-arrow-right right-arrow"></i>
@@ -173,12 +173,8 @@
                                 嚴格篩選台灣特色品種，遵循稻種育苗三級繁殖制度，確保每一粒米的品種純度以及品質的穩定。
                             </p>
                         </div>
-
                     </div>
                 </div>
-
-
-
             </div>
         </div>
 
@@ -425,6 +421,13 @@
         $(".header").load("html/header.html");
         $(".footer").load("html/footer.html");
 
+        let move_icon_a = document.querySelector(".move-icon-a");
+
+        move_icon_a.addEventListener("click", function () {
+            console.log("1");
+            $('body,html').stop().animate({ scrollTop: 870 }, 1000);
+            return false;
+        });
 
     </script>
 

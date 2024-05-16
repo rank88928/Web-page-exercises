@@ -33,6 +33,16 @@ advantage_i.forEach(function (li, index) {
     });
 });
 
+$(".advantage-container").on("afterChange", function (event, slick, currentSlide) {
+    advantage_i.forEach(function (li) {
+        li.classList.remove("advantage-current");
+    });
+    advantage_i[currentSlide].classList.add("advantage-current");
+})
+
+
+
+
 
 
 

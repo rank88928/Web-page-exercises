@@ -21,12 +21,10 @@
 
     img {
         height: 870px;
-
-        @media screen and (max-width:1200px) {
-            object-fit: cover;
-        }
+        object-fit: cover;
     }
 }
+
 
 // 顯示點
 .index-carousel .slick-dots {
@@ -34,6 +32,10 @@
     left: 350px;
     width: 20px;
     height: 280px;
+
+    @media screen and (max-width:992px) {
+        left: 10%;
+    }
 
     li {
         margin: 15px 0px;
@@ -56,6 +58,7 @@
     }
 }
 
+// 少裝飾
 
 //標語
 .index-slogan {
@@ -109,22 +112,23 @@
     }
 }
 
-//向下移動圖示
-.move-icon {
-    position: absolute;
+//移動圖示
+.move-icon-a {
     top: 800px;
     left: 50%;
-    // transform: translate(-50%, -50%);
-    z-index: 1;
+    position: absolute;
+    transform: translate(-50%, -50%);
 
     &::after {
         content: '';
-        display: block;
         width: 60px;
         height: 60px;
         border-radius: 5px;
         border: 3px solid rgb(255, 255, 255);
         animation: rotate 2s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+        position: absolute;
+        top: 30px;
+        left: 8px;
     }
 
     @keyframes rotate {
@@ -136,11 +140,6 @@
             transform: translate(-50%, -50%) rotate(135deg);
         }
     }
-}
-
-.move-icon-a {
-    position: absolute;
-    transform: translate(-50%, -50%);
 
     .dot,
     .next {
@@ -346,8 +345,6 @@
     }
 
 
-
-
     .container {
         max-width: 1200px;
         margin: auto;
@@ -355,6 +352,7 @@
         flex-wrap: wrap;
         padding-top: 250px;
 
+        // 標語
         .slogan {
             position: absolute;
             text-align: center;
@@ -368,6 +366,7 @@
                 border: #c69000 1px solid;
             }
         }
+
 
         .txt {
             width: 50%;
@@ -387,6 +386,7 @@
                 margin-top: 20px;
             }
 
+            // 列表
             li:nth-child(1) {
                 margin-top: 60px;
                 border-top: 1px dashed rgb(0, 0, 0);
@@ -422,46 +422,49 @@
                 }
             }
         }
+    }
+}
 
+.advantage-current {
+    color: #c69000;
+    border-bottom: 1px dashed #c69000;
 
-        .advantage-carousel {
-            width: 50%;
-
-            @media screen and (max-width:992px) {
-                width: 100%;
-                padding: 0 50px;
-            }
-
-            .card {
-                padding: 20px 0px 20px 20px;
-                background-color: #ffffff;
-                line-height: 30px;
-
-                samp {
-                    font-weight: 600;
-
-                }
-
-                p {
-                    width: 95%;
-                    margin-top: 20px;
-                    font-size: 16px;
-                }
-
-                img {
-                    width: 95%;
-                }
-            }
-        }
+    .icon {
+        background-color: #c69000;
+        color: #ffffff;
     }
 }
 
 
+.advantage-carousel {
+    width: 50%;
 
+    @media screen and (max-width:992px) {
+        width: 100%;
+        padding: 0 50px;
+    }
 
+    .card {
+        padding: 20px 0px 20px 20px;
+        background-color: #ffffff;
+        line-height: 30px;
 
+        samp {
+            font-weight: 600;
 
+        }
 
+        p {
+            width: 95%;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        img {
+            width: 95%;
+        }
+    }
+}
 
 
 
@@ -650,14 +653,12 @@
 
 // 通路
 .store-link {
-    // height: 350px;
     display: flex;
     flex-wrap: wrap;
 
     .store,
     .on-line {
         width: 50%;
-        // height: 100%;
         background-size: cover;
 
         @media screen and (max-width: 992px) {
