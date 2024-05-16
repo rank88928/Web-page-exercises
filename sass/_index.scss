@@ -164,13 +164,13 @@
 
 //了解我們
 .index-learn-more {
-    background-image: url("/img/main_bg.png");
+    background-image: url("../img/main_bg.png");
     height: 800px;
     position: relative;
 }
 
 .center-people {
-    background-image: url("/img/people.png");
+    background-image: url("../img/people.png");
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -331,7 +331,7 @@
 //優勢
 .index-advantage {
     position: relative;
-    background-image: url("/img/main_bg.png");
+    background-image: url("../img/main_bg.png");
     font-size: 20px;
 
     &::after {
@@ -339,7 +339,7 @@
         position: absolute;
         display: block;
         content: '';
-        background-image: url("/img/features_bg.png");
+        background-image: url("../img/features_bg.png");
         height: 340px;
         width: 100%;
     }
@@ -471,7 +471,7 @@
 
 // 商品輪播
 .product {
-    background-image: url("/img/main_bg.png");
+    background-image: url("../img/main_bg.png");
     padding: 100px 0;
 
     .txt {
@@ -588,7 +588,7 @@
 //最新消息
 .latest-news {
     height: 800px;
-    background-image: url("/img/news_bg.jpg");
+    background-image: url("../img/news_bg.jpg");
 }
 
 .news-box {
@@ -667,11 +667,11 @@
     }
 
     .store {
-        background-image: url("/img/twL_marqueepic_21E01_6vichy4twm.jpg");
+        background-image: url("../img/twL_marqueepic_21E01_6vichy4twm.jpg");
     }
 
     .on-line {
-        background-image: url("/img/twL_marqueepic_21E01_d76v9gq2ma.jpg");
+        background-image: url("../img/twL_marqueepic_21E01_d76v9gq2ma.jpg");
     }
 
     .txt {
