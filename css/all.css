@@ -279,7 +279,7 @@ a:hover {
   color: #c69000;
 }
 
-.txt-bc-w, .index-advantage .container .slogan samp, .center-people .about samp, .index-slogan .about samp, .wrap > .top-container > .about samp {
+.txt-bc-w, .index-advantage .container .slogan samp, .center .about samp, .index-slogan .about samp, .wrap > .top-container > .about samp {
   padding: 20px 10px;
   letter-spacing: 10px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -323,6 +323,51 @@ a:hover {
 
 .no-scroll {
   overflow: hidden;
+}
+
+.m_dropmenu {
+  width: 100%;
+  font-size: 20px;
+  line-height: 40px;
+  position: relative;
+}
+.m_dropmenu .m_current,
+.m_dropmenu .m_item {
+  margin-left: 10px;
+}
+.m_dropmenu .m_title {
+  border: 1px solid #c69000;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #c69000;
+}
+.m_dropmenu .m_arrow {
+  margin: 0 5px;
+  color: #c69000;
+  line-height: 40px;
+}
+.m_dropmenu .m_list {
+  max-height: 0;
+  transition: 1s ease;
+  position: absolute;
+  top: 42px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 99;
+}
+.m_dropmenu .m_list li {
+  border: 1px solid #bbbbbb;
+  border-top: 0px;
+  height: 40px;
+  background-color: #fff;
+}
+.m_dropmenu .m_list li a {
+  display: block;
+}
+.m_dropmenu .m_list_open {
+  max-height: 400px;
 }
 
 .menu {
@@ -502,7 +547,7 @@ a:hover {
 .wrap > .top-container > .about {
   position: absolute;
   top: 80px;
-  right: 300px;
+  right: 20%;
   color: #000;
   writing-mode: vertical-rl;
 }
@@ -521,21 +566,38 @@ a:hover {
 .title-container {
   margin-bottom: 60px;
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #000;
+  flex-wrap: wrap;
   letter-spacing: 3px;
   font-size: 16px;
 }
-.title-container > .title {
+
+.title-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+}
+.title-box > .title {
   margin-bottom: 30px;
 }
-.title-container > .title > .en {
+.title-box > .title > .en {
   font-size: 40px;
 }
-.title-container > .title > .tw {
+.title-box > .title > .tw {
   font-size: 24px;
   margin: 20px 0 30px 0;
   font-weight: 700;
+}
+
+.dropmenu-box {
+  margin-top: 20px;
+  width: 100%;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .dropmenu-box {
+    display: block;
+  }
 }
 
 .page-nav > .breadcrumbs {
@@ -545,6 +607,13 @@ a:hover {
 .page-nav > ul {
   display: flex;
   margin-top: 100px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 768px) {
+  .page-nav > ul {
+    display: none;
+  }
 }
 .page-nav > ul > li {
   margin: 0 10px;
@@ -760,38 +829,21 @@ a:hover {
   position: relative;
 }
 
-.center-people {
-  background-image: url("../img/people.png");
-  width: 100%;
+.center {
   height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 3;
   position: relative;
 }
-.center-people .buffalo,
-.center-people .farmer,
-.center-people .room,
-.center-people .bird,
-.center-people .slogan,
-.center-people .about,
-.center-people .about-en {
+.center .center-people {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 85%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
-@media screen and (max-width: 1200px) {
-  .center-people .buffalo,
-  .center-people .farmer,
-  .center-people .room,
-  .center-people .bird,
-  .center-people .slogan,
-  .center-people .about,
-  .center-people .about-en {
-    display: none;
-  }
-}
-.center-people .egg {
+.center .egg {
   position: absolute;
   top: 55%;
   left: 50%;
@@ -801,41 +853,80 @@ a:hover {
   background-repeat: no-repeat;
   z-index: 2;
 }
-.center-people .buffalo {
+@media screen and (max-width: 992px) {
+  .center .egg {
+    width: 230px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .center .egg {
+    width: 180px;
+    height: 240px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .center .egg {
+    width: 180px;
+    height: 240px;
+  }
+}
+.center .buffalo,
+.center .farmer,
+.center .room,
+.center .bird,
+.center .slogan,
+.center .about,
+.center .about-en {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+@media screen and (max-width: 1200px) {
+  .center .buffalo,
+  .center .farmer,
+  .center .room,
+  .center .bird,
+  .center .slogan,
+  .center .about,
+  .center .about-en {
+    display: none;
+  }
+}
+.center .buffalo {
   z-index: 1;
   transform: translate(-100%, 55%);
 }
-.center-people .farmer {
+.center .farmer {
   z-index: 1;
   transform: translate(50%, 30%);
 }
-.center-people .room {
+.center .room {
   z-index: -1;
   transform: translate(30%, -18%);
 }
-.center-people .bird {
+.center .bird {
   z-index: 2;
   transform: translate(45%, -250%);
 }
-.center-people .slogan {
+.center .slogan {
   font-size: 16px;
   letter-spacing: 6px;
   line-height: 30px;
   transform: translate(-260%, -450%);
 }
-.center-people .slogan::after {
+.center .slogan::after {
   content: "";
   display: block;
   width: 60px;
   height: 5px;
   background-color: #c69000;
 }
-.center-people .about {
+.center .about {
   transform: translate(220%, -125%);
   font-size: 20px;
   writing-mode: vertical-rl;
 }
-.center-people .about-en {
+.center .about-en {
   transform: translate(-1550%, 25%);
   writing-mode: vertical-rl;
   font-size: 16px;
@@ -1190,6 +1281,15 @@ a:hover {
 .about-content .column-2 {
   width: 33%;
 }
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-wrap: wrap;
+  }
+  .about-content .column-1,
+  .about-content .column-2 {
+    width: 100%;
+  }
+}
 
 .quality-content {
   display: flex;
@@ -1199,9 +1299,13 @@ a:hover {
 .process-container {
   position: relative;
   margin-bottom: 30px;
-  height: 420px;
   background-color: #fff;
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .process-container {
+    flex-wrap: wrap;
+  }
 }
 .process-container::before {
   content: "";
@@ -1210,12 +1314,30 @@ a:hover {
   width: 100%;
   border: 1px solid #dadada;
 }
+@media screen and (max-width: 768px) {
+  .process-container::before {
+    top: 25%;
+  }
+}
 .process-container > .txt {
   position: relative;
   width: 20%;
   margin: 200px 35px 0 35px;
   line-height: 24px;
   font-size: 16px;
+}
+@media screen and (max-width: 1200px) {
+  .process-container > .txt {
+    margin: 200px 10px 0 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .process-container > .txt {
+    width: 100%;
+    margin: 20px;
+    height: 100px;
+    order: 1;
+  }
 }
 .process-container > .txt::after {
   content: "";
@@ -1225,6 +1347,11 @@ a:hover {
   width: 60px;
   border: 2px solid #c69000;
 }
+@media screen and (max-width: 768px) {
+  .process-container > .txt::after {
+    top: 118%;
+  }
+}
 .process-container > .txt > h2 {
   font-weight: 700;
   font-size: 20px;
@@ -1233,12 +1360,24 @@ a:hover {
 .process-container .car-btn-box {
   margin-top: 40px;
 }
+@media screen and (max-width: 992px) {
+  .process-container .car-btn-box {
+    margin-top: 10px;
+  }
+}
 
 .process-carousel,
 .quality-carousel {
   display: flex;
   width: 80%;
   height: 420px;
+}
+@media screen and (max-width: 768px) {
+  .process-carousel,
+  .quality-carousel {
+    width: 100%;
+    order: 2;
+  }
 }
 .process-carousel .card,
 .quality-carousel .card {
@@ -1257,6 +1396,13 @@ a:hover {
 .quality-carousel .card > .txt {
   width: 260px;
 }
+@media screen and (max-width: 992px) {
+  .process-carousel .card > .txt,
+  .quality-carousel .card > .txt {
+    margin: auto;
+    width: 200px;
+  }
+}
 .process-carousel .card > .txt > h3,
 .quality-carousel .card > .txt > h3 {
   font-size: 20px;
@@ -1269,9 +1415,24 @@ a:hover {
 }
 .process-carousel .card > .txt > p,
 .quality-carousel .card > .txt > p {
-  margin-top: 20px;
+  width: 90%;
+  margin: 20px auto 0 auto;
   font-size: 16px;
   line-height: 24px;
+}
+@media screen and (max-width: 1080px) {
+  .process-carousel .card > .txt > p,
+  .quality-carousel .card > .txt > p {
+    width: 80%;
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .process-carousel .card > .txt > p,
+  .quality-carousel .card > .txt > p {
+    width: 90%;
+    margin: 20px auto 0 auto;
+  }
 }
 
 .shop {
@@ -1284,11 +1445,42 @@ a:hover {
   margin-bottom: 50px;
   font-size: 16px;
 }
+@media screen and (max-width: 1100px) {
+  .shop > .card {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .shop > .card {
+    padding: 0 5px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .shop > .card {
+    width: 33.33%;
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .shop > .card {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .shop > .card {
+    width: 80%;
+  }
+}
 .shop > .card > .img {
   width: 75%;
   margin: auto;
   height: 240px;
   text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .shop > .card > .img {
+    width: 90%;
+  }
 }
 .shop > .card > .img img {
   width: 95%;
@@ -1300,6 +1492,41 @@ a:hover {
 }
 .shop > .card > .txt {
   margin-top: 20px;
+}
+@media screen and (max-width: 992px) {
+  .shop > .card > .txt {
+    margin-top: 55px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .shop > .card > .txt {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .shop > .card > .txt {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .shop > .card > .txt {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .shop > .card > .txt {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .shop > .card > .txt {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .shop > .card > .txt {
+    margin-top: 120px;
+  }
 }
 .shop > .card > .txt > h3 {
   font-size: 20px;
@@ -1360,9 +1587,7 @@ a:hover {
 .recipes .card:nth-child(1) .txt {
   height: 25%;
 }
-.recipes .card:nth-child(1) .txt .introduce-box {
-  width: 50%;
-}
+.recipes .card:nth-child(1) .txt .introduce-box,
 .recipes .card:nth-child(1) .txt .link-box {
   width: 50%;
 }
@@ -1372,26 +1597,30 @@ a:hover {
   height: 50%;
 }
 .recipes .card:nth-child(2) .img,
-.recipes .card:nth-child(3) .img {
+.recipes .card:nth-child(2) .txt,
+.recipes .card:nth-child(3) .img,
+.recipes .card:nth-child(3) .txt {
   width: 50%;
   height: 100%;
 }
 .recipes .card:nth-child(2) .txt,
 .recipes .card:nth-child(3) .txt {
   flex-direction: column;
-  width: 50%;
-  height: 100%;
 }
 .recipes .card:nth-child(2) .txt .introduce-box,
-.recipes .card:nth-child(3) .txt .introduce-box {
-  height: 50%;
-}
 .recipes .card:nth-child(2) .txt .link-box,
+.recipes .card:nth-child(3) .txt .introduce-box,
 .recipes .card:nth-child(3) .txt .link-box {
   height: 50%;
 }
 .recipes .card:nth-child(2) {
   flex-direction: row-reverse;
+}
+@media screen and (max-width: 1200px) {
+  .recipes {
+    height: auto;
+    flex-direction: row;
+  }
 }
 
 .page-box {

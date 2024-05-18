@@ -204,7 +204,7 @@
         >.about {
             position: absolute;
             top: 80px;
-            right: 300px;
+            right: 20%;
             color: #000;
             writing-mode: vertical-rl;
 
@@ -231,10 +231,16 @@
 .title-container {
     margin-bottom: 60px;
     display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #000;
+    flex-wrap: wrap;
     letter-spacing: 3px;
     font-size: 16px;
+}
+
+.title-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
 
     >.title {
         margin-bottom: 30px;
@@ -251,6 +257,17 @@
     }
 }
 
+.dropmenu-box {
+    margin-top: 20px;
+    width: 100%;
+    display: none;
+
+    @media screen and (max-width:768px) {
+        display: block;
+    }
+}
+
+
 //麵包屑
 .page-nav {
     >.breadcrumbs {
@@ -261,6 +278,12 @@
     >ul {
         display: flex;
         margin-top: 100px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        @media screen and (max-width:768px) {
+            display: none;
+        }
 
         >li {
             margin: 0 10px;

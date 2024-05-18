@@ -41,12 +41,6 @@ $(".advantage-container").on("afterChange", function (event, slick, currentSlide
 })
 
 
-
-
-
-
-
-
 // 首頁商品輪撥
 $('.product-container').slick({
     slidesToShow: 4,
@@ -100,9 +94,17 @@ $('.news-container-b').slick({
 $('.process-carousel').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
+
+    responsive: [{
+        breakpoint: 992,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+        }
+    }]
 });
 $('.process-prev').click(function () {
     $('.process-carousel').slick('slickPrev');
@@ -115,9 +117,17 @@ $('.process-next').click(function () {
 $('.quality-carousel').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
+
+    responsive: [{
+        breakpoint: 992,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+        }
+    }]
 });
 $('.quality-prev').click(function () {
     $('.quality-carousel').slick('slickPrev');
@@ -126,5 +136,34 @@ $('.quality-next').click(function () {
     $('.quality-carousel').slick('slickNext');
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+// 模組化元件
+
+// 下拉展開
+let m_dropmenu_btn = document.querySelector(".m_title");
+let m_list = document.querySelector(".m_list");
+let m_list_state = 0;
+
+m_dropmenu_btn.addEventListener("click", function () {
+
+    if (m_list_state === 0) {
+        m_list_state += 1;
+        m_list.classList.add("m_list_open");
+    } else {
+        m_list_state = 0;
+        m_list.classList.remove("m_list_open");
+    }
+});
 
 

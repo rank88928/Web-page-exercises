@@ -1,0 +1,54 @@
+// 下拉展開
+.m_dropmenu {
+    width: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    position: relative;
+
+    .m_current,
+    .m_item {
+        margin-left: 10px;
+    }
+
+    // 顯示標題
+    .m_title {
+        border: 1px solid #c69000;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        color: #c69000;
+    }
+
+    .m_arrow {
+        margin: 0 5px;
+        color: #c69000;
+        line-height: 40px;
+    }
+
+    // 內容清單
+    .m_list {
+        max-height: 0;
+        transition: 1s ease;
+        position: absolute;
+        top: 42px;
+        width: 100%;
+        overflow: hidden;
+        z-index: 99;
+
+        li {
+            border: 1px solid #bbbbbb;
+            border-top: 0px;
+            height: 40px;
+            background-color: #fff;
+
+            a {
+                display: block;
+            }
+        }
+    }
+
+    .m_list_open {
+        max-height: 400px;
+    }
+}
