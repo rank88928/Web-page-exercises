@@ -2,51 +2,34 @@
 
 .login {
     width: 90%;
-    height: 620px;
     background-color: #fff;
     display: flex;
     margin: auto;
     box-shadow: 0px 0px 15px 0px rgba(4, 4, 4, 0.1);
-    position: relative;
+    padding: 90px 30px;
 
-    &::after,
-    &::before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    &::after {
-        content: "OR";
-        width: 50px;
-        height: 50px;
-        background-color: #fff;
-        text-align: center;
-        line-height: 50px;
-    }
-
-    &::before {
-        content: "";
-        border-left: 1px solid #000000;
-        height: 70%;
+    @media screen and (max-width:768px) {
+        flex-wrap: wrap;
     }
 }
 
 .login-box,
 .third-party-box {
-    padding: 90px;
     width: 50%;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 0px 40px;
+
+    @media screen and (max-width:768px) {
+        width: 100%;
+        padding: 40px;
+    }
 }
 
 .login-box {
     justify-content: space-around;
-}
 
-.login-box {
     >h2 {
         font-size: 24px;
 
@@ -80,6 +63,7 @@
     }
 }
 
+// 帳號密碼
 .account-box,
 .password-box {
     position: relative;
@@ -89,7 +73,6 @@
         width: 100%;
         border: none;
         border-bottom: 1px solid #000000;
-        position: relative;
         outline: none;
 
         &:focus {
@@ -97,9 +80,11 @@
         }
     }
 
+    // 要改輸入文字要保持上升
     label {
         position: absolute;
         top: 20px;
+        left: 0;
         transition: 0.3s ease;
     }
 }
@@ -125,6 +110,35 @@
 }
 
 //第三方連結
+.third-party-box {
+    border-left: 1px solid #000000;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+        content: "OR";
+        height: 50px;
+        width: 50px;
+        background-color: #fff;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    @media screen and (max-width:768px) {
+        border-left: none;
+        border-top: 1px solid #000000;
+
+        &::after {
+            top: 0%;
+            left: 50%;
+        }
+    }
+}
 
 .login-button {
     display: block;

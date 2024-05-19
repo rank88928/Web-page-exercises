@@ -456,20 +456,29 @@ a:hover {
 }
 
 .footer {
-  height: 400px;
-  padding: 0 70px;
+  padding: 0 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.footer .txt,
+.footer .last-nav {
+  width: 90%;
+}
 .footer .txt {
   display: flex;
-  margin-top: 90px;
+  padding: 60px 0 20px 0;
+  border-bottom: 2px solid #000;
   justify-content: space-between;
-  width: 80%;
+  line-height: 40px;
 }
-.footer .txt .contact-us {
-  padding-bottom: 40px;
+
+.contact-us {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact-us .contact-details {
+  margin: 0 5px;
 }
 
 .user-service {
@@ -506,12 +515,11 @@ a:hover {
 }
 
 .last-nav {
-  padding-top: 40px;
-  border-top: 2px solid #000;
-  width: 80%;
-  margin-top: 30px;
-  text-align: center;
+  line-height: 60px;
   font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   .last-nav {
@@ -523,9 +531,12 @@ a:hover {
 }
 
 .back-top {
-  margin-top: 100px;
-  width: 70%;
-  text-align: center;
+  margin: 35px 0;
+}
+@media screen and (max-width: 992px) {
+  .back-top {
+    margin: 35px 0 70px 0;
+  }
 }
 
 .wrap {
@@ -543,6 +554,7 @@ a:hover {
 }
 .wrap > .top-container > .bk > img {
   height: 450px;
+  object-fit: cover;
 }
 .wrap > .top-container > .about {
   position: absolute;
@@ -622,19 +634,19 @@ a:hover {
   margin-right: 0px;
 }
 
-.news-card, .news, .news-box .chief .card, .news-box .vice .card {
+.news-card, .news .card, .news-box .chief .card, .news-box .vice .card {
   background-color: #fff;
   height: 100%;
 }
-.news-card .img, .news .img, .news-box .chief .card .img, .news-box .vice .card .img {
+.news-card .img, .news .card .img, .news-box .chief .card .img, .news-box .vice .card .img {
   position: relative;
   overflow: hidden;
 }
-.news-card .img:hover img, .news .img:hover img, .news-box .chief .card .img:hover img, .news-box .vice .card .img:hover img {
+.news-card .img:hover img, .news .card .img:hover img, .news-box .chief .card .img:hover img, .news-box .vice .card .img:hover img {
   transform: scale(1.1);
   transition: all 0.5s ease;
 }
-.news-card .img::after, .news .img::after, .news-box .chief .card .img::after, .news-box .vice .card .img::after {
+.news-card .img::after, .news .card .img::after, .news-box .chief .card .img::after, .news-box .vice .card .img::after {
   content: "Details+";
   color: #fff;
   display: block;
@@ -651,11 +663,11 @@ a:hover {
   transition: all 0.5s ease;
   z-index: 2;
 }
-.news-card .img:hover::after, .news .img:hover::after, .news-box .chief .card .img:hover::after, .news-box .vice .card .img:hover::after {
+.news-card .img:hover::after, .news .card .img:hover::after, .news-box .chief .card .img:hover::after, .news-box .vice .card .img:hover::after {
   top: 50%;
   opacity: 1;
 }
-.news-card .img::before, .news .img::before, .news-box .chief .card .img::before, .news-box .vice .card .img::before {
+.news-card .img::before, .news .card .img::before, .news-box .chief .card .img::before, .news-box .vice .card .img::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -666,19 +678,19 @@ a:hover {
   transition: all 0.5s ease;
   z-index: 1;
 }
-.news-card .img:hover::before, .news .img:hover::before, .news-box .chief .card .img:hover::before, .news-box .vice .card .img:hover::before {
+.news-card .img:hover::before, .news .card .img:hover::before, .news-box .chief .card .img:hover::before, .news-box .vice .card .img:hover::before {
   opacity: 0.5;
 }
-.news-card .txt, .news .txt, .news-box .chief .card .txt, .news-box .vice .card .txt {
+.news-card .txt, .news .card .txt, .news-box .chief .card .txt, .news-box .vice .card .txt {
   margin: 15px 0;
   padding: 0 15px;
   font-size: 16px;
 }
-.news-card .txt h3, .news .txt h3, .news-box .chief .card .txt h3, .news-box .vice .card .txt h3 {
+.news-card .txt h3, .news .card .txt h3, .news-box .chief .card .txt h3, .news-box .vice .card .txt h3 {
   font-size: 20px;
   margin: 15px 0;
 }
-.news-card a, .news a, .news-box .chief .card a, .news-box .vice .card a {
+.news-card a, .news .card a, .news-box .chief .card a, .news-box .vice .card a {
   border-top: 1px solid #000;
   padding-top: 20px;
   margin-top: 20px;
@@ -1540,86 +1552,123 @@ a:hover {
   flex-wrap: wrap;
   flex-direction: column;
 }
-.recipes > .card {
+.recipes .card {
   width: 50%;
 }
-.recipes > .card img {
+.recipes .card img {
   height: 100%;
 }
-.recipes > .card > .txt {
+.recipes .card .txt {
   display: flex;
   background-color: #eeeeee;
   line-height: 24px;
   font-size: 14px;
 }
-.recipes > .card > .txt .introduce-box {
+.recipes .card .introduce-box {
   padding: 30px;
 }
-.recipes > .card > .txt .introduce-box h3 {
+.recipes .card .introduce-box h3 {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 20px;
 }
-.recipes > .card > .txt .link-box {
+.recipes .card .link-box {
   padding: 30px 15px;
   font-size: 24px;
   display: flex;
   flex-wrap: wrap;
   text-align: end;
 }
-.recipes > .card > .txt .link-box i {
+.recipes .card .link-box i {
   color: #c69000;
   margin: 0 15px;
 }
-.recipes > .card > .txt .link-box a {
+.recipes .card .link-box a {
   width: 100%;
   font-size: 16px;
   line-height: 60px;
   margin-top: 20px;
   border-top: 1px solid #c69000;
 }
-.recipes .card:nth-child(1) {
-  height: 100%;
+@media screen and (min-width: 1200px) {
+  .recipes .card:nth-child(1) {
+    height: 100%;
+  }
+  .recipes .card:nth-child(1) .img {
+    height: 75%;
+  }
+  .recipes .card:nth-child(1) .txt {
+    height: 25%;
+  }
+  .recipes .card:nth-child(1) .introduce-box,
+  .recipes .card:nth-child(1) .link-box {
+    width: 50%;
+  }
+  .recipes .card:nth-child(2),
+  .recipes .card:nth-child(3) {
+    display: flex;
+    height: 50%;
+  }
+  .recipes .card:nth-child(2) .img,
+  .recipes .card:nth-child(2) .txt,
+  .recipes .card:nth-child(3) .img,
+  .recipes .card:nth-child(3) .txt {
+    width: 50%;
+    height: 100%;
+  }
+  .recipes .card:nth-child(2) .txt,
+  .recipes .card:nth-child(3) .txt {
+    flex-direction: column;
+  }
+  .recipes .card:nth-child(2) .introduce-box,
+  .recipes .card:nth-child(2) .link-box,
+  .recipes .card:nth-child(3) .introduce-box,
+  .recipes .card:nth-child(3) .link-box {
+    height: 50%;
+  }
+  .recipes .card:nth-child(2) {
+    flex-direction: row-reverse;
+  }
 }
-.recipes .card:nth-child(1) .img {
-  height: 75%;
-}
-.recipes .card:nth-child(1) .txt {
-  height: 25%;
-}
-.recipes .card:nth-child(1) .txt .introduce-box,
-.recipes .card:nth-child(1) .txt .link-box {
-  width: 50%;
-}
-.recipes .card:nth-child(2),
-.recipes .card:nth-child(3) {
-  display: flex;
-  height: 50%;
-}
-.recipes .card:nth-child(2) .img,
-.recipes .card:nth-child(2) .txt,
-.recipes .card:nth-child(3) .img,
-.recipes .card:nth-child(3) .txt {
-  width: 50%;
-  height: 100%;
-}
-.recipes .card:nth-child(2) .txt,
-.recipes .card:nth-child(3) .txt {
-  flex-direction: column;
-}
-.recipes .card:nth-child(2) .txt .introduce-box,
-.recipes .card:nth-child(2) .txt .link-box,
-.recipes .card:nth-child(3) .txt .introduce-box,
-.recipes .card:nth-child(3) .txt .link-box {
-  height: 50%;
-}
-.recipes .card:nth-child(2) {
-  flex-direction: row-reverse;
-}
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199.98px) {
   .recipes {
     height: auto;
     flex-direction: row;
+  }
+  .recipes .card {
+    width: 33.33%;
+    padding: 20px;
+    flex-direction: row;
+  }
+  .recipes .card .img {
+    width: 100%;
+  }
+  .recipes .card .txt {
+    flex-wrap: wrap;
+  }
+  .recipes .card .introduce-box {
+    padding: 15px;
+  }
+  .recipes .card .link-box {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .recipes .card {
+    width: 50%;
+  }
+  .recipes .card .link-box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .recipes .card .link-box i {
+    margin: 0 5px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .recipes .card {
+    width: 100%;
   }
 }
 
@@ -1675,6 +1724,30 @@ a:hover {
 .location > .item h3 {
   margin-top: 130px;
 }
+@media screen and (max-width: 992px) {
+  .location > .item {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .location > .item {
+    width: 50%;
+  }
+  .location > .item img {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .location > .item {
+    width: 100%;
+  }
+  .location > .item img {
+    width: 60%;
+  }
+  .location > .item h3 {
+    display: none;
+  }
+}
 
 .news {
   display: flex;
@@ -1684,6 +1757,17 @@ a:hover {
 }
 .news .card {
   width: 30%;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 992px) {
+  .news .card {
+    width: 47%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .news .card {
+    width: 100%;
+  }
 }
 
 .contact-txt {
@@ -1719,6 +1803,15 @@ a:hover {
 .contact-form .message input {
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .contact-form .name,
+  .contact-form .telephone,
+  .contact-form .mobile-phone,
+  .contact-form .email,
+  .contact-form .message {
+    width: 100%;
+  }
+}
 .contact-form .message,
 .contact-form #message {
   width: 100%;
@@ -1739,46 +1832,37 @@ a:hover {
 /*登入頁樣式*/
 .login {
   width: 90%;
-  height: 620px;
   background-color: #fff;
   display: flex;
   margin: auto;
   box-shadow: 0px 0px 15px 0px rgba(4, 4, 4, 0.1);
-  position: relative;
+  padding: 90px 30px;
 }
-.login::after, .login::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.login::after {
-  content: "OR";
-  width: 50px;
-  height: 50px;
-  background-color: #fff;
-  text-align: center;
-  line-height: 50px;
-}
-.login::before {
-  content: "";
-  border-left: 1px solid #000000;
-  height: 70%;
+@media screen and (max-width: 768px) {
+  .login {
+    flex-wrap: wrap;
+  }
 }
 
 .login-box,
 .third-party-box {
-  padding: 90px;
   width: 50%;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 0px 40px;
+}
+@media screen and (max-width: 768px) {
+  .login-box,
+  .third-party-box {
+    width: 100%;
+    padding: 40px;
+  }
 }
 
 .login-box {
   justify-content: space-around;
 }
-
 .login-box > h2 {
   font-size: 24px;
 }
@@ -1816,7 +1900,6 @@ a:hover {
   width: 100%;
   border: none;
   border-bottom: 1px solid #000000;
-  position: relative;
   outline: none;
 }
 .account-box .loginbar:focus,
@@ -1827,6 +1910,7 @@ a:hover {
 .password-box label {
   position: absolute;
   top: 20px;
+  left: 0;
   transition: 0.3s ease;
 }
 
@@ -1847,6 +1931,35 @@ a:hover {
 .regsiter a {
   color: #c69000;
   text-decoration: underline;
+}
+
+.third-party-box {
+  border-left: 1px solid #000000;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.third-party-box::after {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  content: "OR";
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  line-height: 50px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .third-party-box {
+    border-left: none;
+    border-top: 1px solid #000000;
+  }
+  .third-party-box::after {
+    top: 0%;
+    left: 50%;
+  }
 }
 
 .login-button {

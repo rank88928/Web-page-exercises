@@ -59,9 +59,6 @@
     }
 }
 
-
-
-
 // 導航選單
 .top-nav {
     margin: 50px 20px;
@@ -107,21 +104,32 @@
 
 // 頁尾
 .footer {
-    height: 400px;
-    padding: 0 70px;
+    padding: 0 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    .txt,
+    .last-nav {
+        width: 90%;
+    }
+
     .txt {
         display: flex;
-        margin-top: 90px;
+        padding: 60px 0 20px 0;
+        border-bottom: 2px solid #000;
         justify-content: space-between;
-        width: 80%;
+        line-height: 40px;
+    }
+}
 
-        .contact-us {
-            padding-bottom: 40px;
-        }
+// 聯繫方式
+.contact-us {
+    display: flex;
+    flex-wrap: wrap;
+
+    .contact-details {
+        margin: 0 5px;
     }
 }
 
@@ -154,12 +162,11 @@
 }
 
 .last-nav {
-    padding-top: 40px;
-    border-top: 2px solid #000;
-    width: 80%;
-    margin-top: 30px;
-    text-align: center;
+    line-height: 60px;
     font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     @media screen and (max-width:768px) {
         display: none;
@@ -171,10 +178,13 @@
 }
 
 .back-top {
-    margin-top: 100px;
-    width: 70%;
-    text-align: center;
+    margin: 35px 0;
+
+    @media screen and (max-width:992px) {
+        margin: 35px 0 70px 0;
+    }
 }
+
 
 
 
@@ -198,6 +208,7 @@
         >.bk {
             >img {
                 height: 450px;
+                object-fit: cover;
             }
         }
 
