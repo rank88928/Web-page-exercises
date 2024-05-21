@@ -49,13 +49,21 @@ $('.product-container').slick({
     autoplaySpeed: 2000,
     arrows: false,
 
-    responsive: [{ // 定義響應式設置
-        breakpoint: 992, // 媒體查詢斷點
-        settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-        }
-    }]
+    responsive: [
+        { // 定義響應式設置
+            breakpoint: 992, // 媒體查詢斷點
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 450,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
 });
 
 $('.commodity-prev').click(function () {
@@ -85,6 +93,14 @@ $('.news-container-b').slick({
     dots: true,
     focusOnSelect: true,
     arrows: false,
+    responsive: [
+        { // 定義響應式設置
+            breakpoint: 450, // 媒體查詢斷點
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
 });
 
 

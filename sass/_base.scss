@@ -1,21 +1,27 @@
 // 全局設定
+* {
+    scroll-behavior: smooth;
+}
+
+* {
+    // border: 1px solid #ff0000 !important;
+}
+
+
 *,
 *::after,
 *::before {
     box-sizing: border-box;
 }
 
-* {
-    scroll-behavior: smooth
+html {
+    font-size: 16px;
 }
 
 img {
     max-width: 100%;
     // height: auto;
 }
-
-
-
 
 
 

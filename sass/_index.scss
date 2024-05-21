@@ -58,7 +58,7 @@
     }
 }
 
-// 少裝飾
+// 少線條裝飾
 
 //標語
 .index-slogan {
@@ -71,12 +71,16 @@
     left: 15%;
 
     .slogan {
-        font-size: 110px;
+        font-size: 7rem;
         font-weight: 700;
         color: #ffffff;
 
         @media screen and (max-width:992px) {
-            font-size: 65px;
+            font-size: 4rem;
+        }
+
+        @media screen and (max-width:450px) {
+            font-size: 3rem;
         }
 
         &::after {
@@ -95,6 +99,10 @@
 
         samp {
             @extend .txt-bc-w;
+
+            @media screen and (max-width:450px) {
+                font-size: 1rem;
+            }
         }
     }
 }
@@ -104,7 +112,7 @@
     writing-mode: vertical-rl;
     top: 20%;
     right: 5%;
-    font-size: 16px;
+    font-size: 1rem;
     z-index: 1;
 
     @media screen and (max-width:1200px) {
@@ -167,6 +175,10 @@
     background-image: url("../img/main_bg.png");
     height: 800px;
     position: relative;
+
+    @media screen and (max-width:450px) {
+        height: 600px;
+    }
 }
 
 .center {
@@ -182,6 +194,17 @@
         margin: auto;
         display: flex;
         justify-content: center;
+
+        @media screen and (max-width:450px) {
+            width: 100%;
+            height: 100%;
+
+            >img {
+                width: 200%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     }
 
     .egg {
@@ -246,7 +269,7 @@
     }
 
     .slogan {
-        font-size: 16px;
+        font-size: 1rem;
         letter-spacing: 6px;
         line-height: 30px;
         transform: translate(-260%, -450%);
@@ -262,9 +285,8 @@
 
     .about {
         transform: translate(220%, -125%);
-        font-size: 20px;
+        font-size: 1.2rem;
         writing-mode: vertical-rl;
-        // z-index: 3;
 
         samp {
             @extend .txt-bc-w;
@@ -274,8 +296,7 @@
     .about-en {
         transform: translate(-1550%, 25%);
         writing-mode: vertical-rl;
-        font-size: 16px;
-        // z-index: 3;
+        font-size: 1rem;
     }
 }
 
@@ -289,7 +310,7 @@
     transform: translate(-50%, -50%);
     z-index: 5;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.2rem;
 
     img {
         width: 60px;
@@ -350,7 +371,7 @@
 .index-advantage {
     position: relative;
     background-image: url("../img/main_bg.png");
-    font-size: 20px;
+    font-size: 1.2rem;
 
     &::after {
         top: 0;
@@ -358,7 +379,8 @@
         display: block;
         content: '';
         background-image: url("../img/features_bg.png");
-        height: 340px;
+        background-repeat: no-repeat;
+        height: 50%;
         width: 100%;
     }
 
@@ -379,6 +401,10 @@
             writing-mode: vertical-rl;
             z-index: 1;
 
+            @media screen and (max-width:450px) {
+                top: 3%;
+            }
+
             samp {
                 @extend .txt-bc-w;
                 border: #c69000 1px solid;
@@ -396,11 +422,11 @@
             }
 
             .en {
-                font-size: 70px;
+                font-size: 3rem;
             }
 
             .tw {
-                font-size: 24px;
+                font-size: 1.4rem;
                 margin-top: 20px;
             }
 
@@ -414,6 +440,7 @@
                 display: flex;
                 align-items: center;
                 border-bottom: 1px dashed rgb(0, 0, 0);
+                padding: 10px 0;
 
                 &:hover {
                     color: #c69000;
@@ -428,8 +455,11 @@
                 h3 {
                     width: 85%;
                     margin-left: 20px;
-                    font-size: 20px;
-                    line-height: 90px;
+                    font-size: 1.2em;
+
+                    @media screen and (max-width:450px) {
+                        font-size: 1rem;
+                    }
                 }
 
                 .icon {
@@ -443,6 +473,7 @@
     }
 }
 
+//優勢當前選中li
 .advantage-current {
     color: #c69000;
     border-bottom: 1px dashed #c69000;
@@ -466,16 +497,15 @@
         padding: 20px 0px 20px 20px;
         background-color: #ffffff;
         line-height: 30px;
+        font-size: 1rem;
 
         samp {
             font-weight: 600;
-
         }
 
         p {
             width: 95%;
             margin-top: 20px;
-            font-size: 16px;
         }
 
         img {
@@ -495,14 +525,18 @@
     .txt {
         text-align: center;
         letter-spacing: 5px;
-        font-size: 18px;
+        font-size: 1.2rem;
 
         .en {
-            font-size: 80px;
+            font-size: 4.8rem;
+
+            @media screen and (max-width:450px) {
+                font-size: 2rem;
+            }
         }
 
         .tw {
-            font-size: 28px;
+            font-size: 1.5rem;
             margin: 20px 0;
         }
     }
@@ -529,6 +563,7 @@
 
         @media screen and (min-width:992px) {
 
+            // 裝飾線
             &::after,
             &::before {
                 position: absolute;
@@ -581,7 +616,7 @@
             margin-top: 15px;
 
             >h3 {
-                font-size: 20px;
+                font-size: 1.2rem;
                 font-weight: 700;
                 margin-bottom: 15px;
             }
@@ -641,16 +676,26 @@
         }
 
         .txt-h2 {
-            height: 140px;
+            margin-bottom: 20px;
             margin-left: 8px;
 
+            @media screen and (max-width:992px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             .en {
-                font-size: 40px;
+                font-size: 2.5rem;
+
+                @media screen and (max-width:360px) {
+                    font-size: 2rem;
+                }
             }
 
             .tw {
                 margin: 15px 0;
-                font-size: 24px;
+                font-size: 1.5rem;
             }
         }
 
@@ -695,11 +740,15 @@
     .txt {
         margin: 80px 0 80px 20%;
         color: #ffffff;
-        font-size: 40px;
+        font-size: 2.5rem;
         letter-spacing: 3px;
 
+        @media screen and (max-width:450px) {
+            font-size: 1.5rem;
+        }
+
         .tw {
-            font-size: 24px;
+            font-size: 1.5rem;
             margin: 15px 0px;
             margin-bottom: 20px;
         }
