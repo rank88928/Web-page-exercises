@@ -3,7 +3,6 @@
 
 // 下拉展開
 .m_dropmenu {
-    width: 100%;
     font-size: 20px;
     line-height: 40px;
     position: relative;
@@ -27,6 +26,11 @@
         margin: 0 5px;
         color: #c69000;
         line-height: 40px;
+        transition: transform 0.5s;
+    }
+
+    .m_arrow_down {
+        transform: rotate(180deg);
     }
 
     // 內容清單

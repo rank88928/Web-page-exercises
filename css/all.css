@@ -330,7 +330,6 @@ a:hover {
 }
 
 .m_dropmenu {
-  width: 100%;
   font-size: 20px;
   line-height: 40px;
   position: relative;
@@ -351,6 +350,10 @@ a:hover {
   margin: 0 5px;
   color: #c69000;
   line-height: 40px;
+  transition: transform 0.5s;
+}
+.m_dropmenu .m_arrow_down {
+  transform: rotate(180deg);
 }
 .m_dropmenu .m_list {
   max-height: 0;
@@ -566,6 +569,11 @@ a:hover {
   right: 20%;
   color: #000;
   writing-mode: vertical-rl;
+}
+@media screen and (max-width: 450px) {
+  .wrap > .top-container > .about {
+    top: 135px;
+  }
 }
 .main {
   max-width: 1200px;
@@ -1339,20 +1347,25 @@ a:hover {
 
 .about-content {
   display: flex;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .about-content .column-1 {
   width: 66%;
 }
 .about-content .column-1 p {
   margin: 40px 0 10px 24px;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 30px;
   width: 90%;
 }
 .about-content .column-1 p samp {
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: 700;
+}
+@media screen and (max-width: 450px) {
+  .about-content .column-1 p samp {
+    font-size: 1rem;
+  }
 }
 .about-content .column-2 {
   width: 33%;
@@ -1392,7 +1405,7 @@ a:hover {
 }
 @media screen and (max-width: 768px) {
   .process-container::before {
-    top: 25%;
+    display: none;
   }
 }
 .process-container > .txt {
@@ -1400,7 +1413,7 @@ a:hover {
   width: 20%;
   margin: 200px 35px 0 35px;
   line-height: 24px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 @media screen and (max-width: 1200px) {
   .process-container > .txt {
@@ -1411,13 +1424,14 @@ a:hover {
   .process-container > .txt {
     width: 100%;
     margin: 20px;
-    height: 100px;
     order: 1;
   }
 }
-.process-container > .txt::after {
+.process-container > .txt::after, .process-container > .txt::before {
   content: "";
   position: absolute;
+}
+.process-container > .txt::after {
   top: -34%;
   left: 50px;
   width: 60px;
@@ -1425,12 +1439,23 @@ a:hover {
 }
 @media screen and (max-width: 768px) {
   .process-container > .txt::after {
-    top: 118%;
+    top: 110%;
+  }
+}
+.process-container > .txt::before {
+  top: 110%;
+  width: 100%;
+  border: 1px solid #dadada;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .process-container > .txt::before {
+    display: block;
   }
 }
 .process-container > .txt > h2 {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.3rem;
   margin-bottom: 20px;
 }
 .process-container .car-btn-box {
@@ -1481,19 +1506,19 @@ a:hover {
 }
 .process-carousel .card > .txt > h3,
 .quality-carousel .card > .txt > h3 {
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 .process-carousel .card > .txt > h3 > samp,
 .quality-carousel .card > .txt > h3 > samp {
   margin-right: 20px;
-  font-size: 40px;
+  font-size: 1.8rem;
   color: #c69000;
 }
 .process-carousel .card > .txt > p,
 .quality-carousel .card > .txt > p {
   width: 90%;
   margin: 20px auto 0 auto;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
 }
 @media screen and (max-width: 1080px) {
@@ -1515,11 +1540,16 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 500px) {
+  .shop {
+    justify-content: center;
+  }
+}
 .shop > .card {
   width: 25%;
   padding: 0 25px;
   margin-bottom: 50px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 @media screen and (max-width: 1100px) {
   .shop > .card {
@@ -1604,8 +1634,18 @@ a:hover {
     margin-top: 120px;
   }
 }
+@media screen and (max-width: 430px) {
+  .shop > .card > .txt {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .shop > .card > .txt {
+    margin-top: 20px;
+  }
+}
 .shop > .card > .txt > h3 {
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -1626,19 +1666,19 @@ a:hover {
   display: flex;
   background-color: #eeeeee;
   line-height: 24px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 .recipes .card .introduce-box {
   padding: 30px;
 }
 .recipes .card .introduce-box h3 {
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
 .recipes .card .link-box {
   padding: 30px 15px;
-  font-size: 24px;
+  font-size: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   text-align: end;
@@ -1649,7 +1689,7 @@ a:hover {
 }
 .recipes .card .link-box a {
   width: 100%;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 60px;
   margin-top: 20px;
   border-top: 1px solid #c69000;
@@ -1710,9 +1750,7 @@ a:hover {
   .recipes .card .txt {
     flex-wrap: wrap;
   }
-  .recipes .card .introduce-box {
-    padding: 15px;
-  }
+  .recipes .card .introduce-box,
   .recipes .card .link-box {
     padding: 15px;
   }
@@ -1758,7 +1796,7 @@ a:hover {
   background-color: #c69000;
 }
 .page-box a i {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .location {
@@ -1769,7 +1807,7 @@ a:hover {
   width: 20%;
   height: 200px;
   padding: 20px;
-  font-size: 20px;
+  font-size: 1.2rem;
   text-align: center;
   font-weight: 600;
   position: relative;
@@ -1835,7 +1873,7 @@ a:hover {
 }
 
 .contact-txt {
-  font-size: 20px;
+  font-size: 1.2rem;
   line-height: 30px;
   margin: 20px 0;
 }

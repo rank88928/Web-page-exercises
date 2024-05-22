@@ -105,12 +105,14 @@ $('.news-container-b').slick({
 
 
 
+
 //嚴選品質-輪播
-//流程
+
+// 流程
 $('.process-carousel').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
 
@@ -120,20 +122,23 @@ $('.process-carousel').slick({
             slidesToShow: 2,
             slidesToScroll: 1
         }
+    },
+    {
+        breakpoint: 450,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
     }]
 });
-$('.process-prev').click(function () {
-    $('.process-carousel').slick('slickPrev');
-});
-$('.process-next').click(function () {
-    $('.process-carousel').slick('slickNext');
-});
+
+
 
 //品質
 $('.quality-carousel').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
 
@@ -143,17 +148,34 @@ $('.quality-carousel').slick({
             slidesToShow: 2,
             slidesToScroll: 1
         }
+    },
+    {
+        breakpoint: 450,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
     }]
 });
+// 初始化
+$('.process-carousel').slick('refresh');
+$('.quality-carousel').slick('refresh');
+
+
+// 品質按鈕
 $('.quality-prev').click(function () {
     $('.quality-carousel').slick('slickPrev');
 });
 $('.quality-next').click(function () {
     $('.quality-carousel').slick('slickNext');
 });
-
-
-
+// 流程
+$('.process-prev').click(function () {
+    $('.process-carousel').slick('slickPrev');
+});
+$('.process-next').click(function () {
+    $('.process-carousel').slick('slickNext');
+});
 
 
 
@@ -168,18 +190,24 @@ $('.quality-next').click(function () {
 
 // 下拉展開
 let m_dropmenu_btn = document.querySelector(".m_title");
+let m_arrow = document.querySelector(".m_arrow");
 let m_list = document.querySelector(".m_list");
 let m_list_state = 0;
 
-m_dropmenu_btn.addEventListener("click", function () {
+if (m_dropmenu_btn) {
+    m_dropmenu_btn.addEventListener("click", function () {
 
-    if (m_list_state === 0) {
-        m_list_state += 1;
-        m_list.classList.add("m_list_open");
-    } else {
-        m_list_state = 0;
-        m_list.classList.remove("m_list_open");
-    }
-});
+        if (m_list_state === 0) {
+            m_list_state += 1;
+            m_list.classList.add("m_list_open");
+            m_arrow.classList.add("m_arrow_down");
+        } else {
+            m_list_state = 0;
+            m_list.classList.remove("m_list_open");
+            m_arrow.classList.remove("m_arrow_down");
+        }
+    });
+}
+
 
 

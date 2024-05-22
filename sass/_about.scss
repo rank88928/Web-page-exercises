@@ -2,20 +2,24 @@
 // 關於樂米
 .about-content {
     display: flex;
-    font-size: 24px;
+    font-size: 1.5rem;
 
     .column-1 {
         width: 66%;
 
         p {
             margin: 40px 0 10px 24px;
-            font-size: 16px;
+            font-size: 1rem;
             line-height: 30px;
             width: 90%;
 
             samp {
-                font-size: 20px;
+                font-size: 1.5rem;
                 font-weight: 700;
+
+                @media screen and (max-width:450px) {
+                    font-size: 1rem;
+                }
             }
         }
     }
@@ -61,8 +65,9 @@
         border: 1px solid #dadada;
 
         @media screen and (max-width:768px) {
-            top: 25%;
+            display: none;
         }
+
     }
 
     >.txt {
@@ -70,7 +75,7 @@
         width: 20%;
         margin: 200px 35px 0 35px;
         line-height: 24px;
-        font-size: 16px;
+        font-size: 1rem;
 
         @media screen and (max-width:1200px) {
             margin: 200px 10px 0 10px;
@@ -79,27 +84,44 @@
         @media screen and (max-width:768px) {
             width: 100%;
             margin: 20px;
-            height: 100px;
+            // height: 100px;
             order: 1;
         }
 
         // 裝飾線
-        &::after {
+        &::after,
+        &::before {
             content: "";
             position: absolute;
+        }
+
+        &::after {
             top: -34%;
             left: 50px;
             width: 60px;
             border: 2px solid #c69000;
 
             @media screen and (max-width:768px) {
-                top: 118%;
+                top: 110%;
             }
+        }
+
+        // 裝飾線
+        &::before {
+            top: 110%;
+            width: 100%;
+            border: 1px solid #dadada;
+            display: none;
+
+            @media screen and (max-width:768px) {
+                display: block;
+            }
+
         }
 
         >h2 {
             font-weight: 700;
-            font-size: 20px;
+            font-size: 1.3rem;
             margin-bottom: 20px;
         }
     }
@@ -147,11 +169,11 @@
             }
 
             >h3 {
-                font-size: 20px;
+                font-size: 1.2rem;
 
                 >samp {
                     margin-right: 20px;
-                    font-size: 40px;
+                    font-size: 1.8rem;
                     color: #c69000;
                 }
             }
@@ -159,7 +181,7 @@
             >p {
                 width: 90%;
                 margin: 20px auto 0 auto;
-                font-size: 16px;
+                font-size: 1rem;
                 line-height: 24px;
 
                 @media screen and (max-width:1080px) {
@@ -171,7 +193,6 @@
                     width: 90%;
                     margin: 20px auto 0 auto;
                 }
-
             }
         }
     }
@@ -184,12 +205,15 @@
     display: flex;
     flex-wrap: wrap;
 
+    @media screen and (max-width:500px) {
+        justify-content: center;
+    }
+
     >.card {
         width: 25%;
         padding: 0 25px;
         margin-bottom: 50px;
-        font-size: 16px;
-
+        font-size: 1rem;
 
         @media screen and (max-width:1100px) {
             padding: 0 15px;
@@ -267,8 +291,17 @@
                 margin-top: 120px;
             }
 
+            @media screen and (max-width:430px) {
+                margin-top: 70px;
+            }
+
+            @media screen and (max-width:370px) {
+                margin-top: 20px;
+            }
+
+
             >h3 {
-                font-size: 20px;
+                font-size: 1.2rem;
                 font-weight: 700;
                 margin-bottom: 15px;
             }
@@ -295,14 +328,14 @@
             display: flex;
             background-color: #eeeeee;
             line-height: 24px;
-            font-size: 14px;
+            font-size: 1rem;
         }
 
         .introduce-box {
             padding: 30px;
 
             h3 {
-                font-size: 18px;
+                font-size: 1.2rem;
                 font-weight: 700;
                 margin-bottom: 20px;
             }
@@ -310,7 +343,7 @@
 
         .link-box {
             padding: 30px 15px;
-            font-size: 24px;
+            font-size: 1.5rem;
             display: flex;
             flex-wrap: wrap;
             text-align: end;
@@ -322,7 +355,7 @@
 
             a {
                 width: 100%;
-                font-size: 16px;
+                font-size: 1rem;
                 line-height: 60px;
                 margin-top: 20px;
                 border-top: 1px solid #c69000;
@@ -393,10 +426,7 @@
 
             }
 
-            .introduce-box {
-                padding: 15px;
-            }
-
+            .introduce-box,
             .link-box {
                 padding: 15px;
             }
@@ -414,7 +444,6 @@
     }
 
     @media screen and (max-width:700px) {
-
         .card .link-box i {
             margin: 0 5px;
         }
@@ -445,7 +474,7 @@
         }
 
         i {
-            font-size: 16px;
+            font-size: 1rem;
         }
     }
 }
@@ -460,7 +489,7 @@
         width: 20%;
         height: 200px;
         padding: 20px;
-        font-size: 20px;
+        font-size: 1.2rem;
         text-align: center;
         font-weight: 600;
         position: relative;
@@ -545,7 +574,7 @@
 
 //聯絡我們
 .contact-txt {
-    font-size: 20px;
+    font-size: 1.2rem;
     line-height: 30px;
     margin: 20px 0;
 }
@@ -586,7 +615,7 @@
         width: 100%;
     }
 
-    // 必填
+    // 必填*號
     .name,
     .email,
     .message {
