@@ -25,27 +25,32 @@
         width: 100%;
         padding: 40px;
     }
+
+    @media screen and (max-width:500px) {
+        width: 100%;
+        padding: 40px 0px;
+    }
 }
 
 .login-box {
     justify-content: space-around;
 
     >h2 {
-        font-size: 24px;
+        font-size: 1.5rem;
 
         samp {
-            font-size: 30px;
+            font-size: 1.6rem;
             color: #c69000;
         }
     }
 
     >p {
-        font-size: 20px;
+        font-size: 1.2rem;
         line-height: 40px;
     }
 
     >.btn-box {
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 600;
         position: relative;
 
@@ -99,7 +104,7 @@
 }
 
 .regsiter {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     text-align: center;
 

@@ -124,15 +124,13 @@ $('.process-carousel').slick({
         }
     },
     {
-        breakpoint: 450,
+        breakpoint: 500,
         settings: {
             slidesToShow: 1,
             slidesToScroll: 1
         }
     }]
 });
-
-
 
 //品質
 $('.quality-carousel').slick({
@@ -150,7 +148,7 @@ $('.quality-carousel').slick({
         }
     },
     {
-        breakpoint: 450,
+        breakpoint: 500,
         settings: {
             slidesToShow: 1,
             slidesToScroll: 1

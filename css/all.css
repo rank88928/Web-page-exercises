@@ -329,8 +329,106 @@ a:hover {
   overflow: hidden;
 }
 
+.animate__rotateInDownLeft,
+.animate__fadeInDown {
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+
+.animate__zoomIn,
+.animate__bounceInDown,
+.animate__rotateInUpLeft,
+.animate__fadeInUpBig {
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+.animate__slideInUp,
+.animate__fadeIn {
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+}
+
+.slogan,
+.about,
+.about-en {
+  animation-name: fade_in;
+}
+
+.slogan {
+  animation-duration: 5s;
+}
+
+.about {
+  animation-duration: 10s;
+}
+
+.about-en {
+  animation-duration: 15s;
+}
+
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.buffalo {
+  animation-name: animation_fade_left;
+  animation-duration: 5s;
+}
+
+.farmer {
+  animation-duration: 7s;
+  animation-name: animation_fade_right;
+}
+
+.room {
+  animation-duration: 3s;
+  animation-name: animation_fade_left;
+}
+
+@keyframes animation_fade_left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes animation_fade_right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.bird {
+  animation-name: animation_flight;
+  offset-path: path("M 0 0 C 45 40 180 200 360 80 C 580 20 500 360 240 560 C 40 280 40 280 20 160 L 0 0 ");
+  offset-rotate: auto;
+  animation-duration: 5s;
+}
+
+@keyframes animation_flight {
+  0% {
+    opacity: 1;
+    offset-distance: 0%;
+  }
+  100% {
+    opacity: 0;
+    offset-distance: 100%;
+  }
+}
 .m_dropmenu {
-  font-size: 20px;
+  font-size: 1.2rem;
   line-height: 40px;
   position: relative;
 }
@@ -345,6 +443,12 @@ a:hover {
   justify-content: space-between;
   cursor: pointer;
   color: #c69000;
+}
+.m_dropmenu a {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .m_dropmenu .m_arrow {
   margin: 0 5px;
@@ -369,9 +473,6 @@ a:hover {
   border-top: 0px;
   height: 40px;
   background-color: #fff;
-}
-.m_dropmenu .m_list li a {
-  display: block;
 }
 .m_dropmenu .m_list_open {
   max-height: 400px;
@@ -547,7 +648,7 @@ a:hover {
 }
 
 .wrap {
-  background-image: url("/img/main_bg.png");
+  background-image: url("../img/main_bg.png");
 }
 .wrap > .top-container {
   position: relative;
@@ -929,8 +1030,6 @@ a:hover {
 .center .about,
 .center .about-en {
   position: absolute;
-  top: 50%;
-  left: 50%;
 }
 @media screen and (max-width: 1200px) {
   .center .buffalo,
@@ -944,26 +1043,31 @@ a:hover {
   }
 }
 .center .buffalo {
+  top: 65%;
+  left: 20%;
   z-index: 1;
-  transform: translate(-100%, 55%);
 }
 .center .farmer {
   z-index: 1;
-  transform: translate(50%, 30%);
+  top: 60%;
+  left: 56%;
 }
 .center .room {
   z-index: -1;
-  transform: translate(30%, -18%);
+  top: 40%;
+  left: 58%;
 }
 .center .bird {
-  z-index: 2;
-  transform: translate(45%, -250%);
+  z-index: 9;
+  top: 15%;
+  left: 55%;
 }
 .center .slogan {
   font-size: 1rem;
   letter-spacing: 6px;
   line-height: 30px;
-  transform: translate(-260%, -450%);
+  top: 10%;
+  left: 15%;
 }
 .center .slogan::after {
   content: "";
@@ -973,12 +1077,14 @@ a:hover {
   background-color: #c69000;
 }
 .center .about {
-  transform: translate(220%, -125%);
+  top: 10%;
+  left: 75%;
   font-size: 1.2rem;
   writing-mode: vertical-rl;
 }
 .center .about-en {
-  transform: translate(-1550%, 25%);
+  top: 55%;
+  left: 15%;
   writing-mode: vertical-rl;
   font-size: 1rem;
 }
@@ -1961,23 +2067,30 @@ a:hover {
     padding: 40px;
   }
 }
+@media screen and (max-width: 500px) {
+  .login-box,
+  .third-party-box {
+    width: 100%;
+    padding: 40px 0px;
+  }
+}
 
 .login-box {
   justify-content: space-around;
 }
 .login-box > h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .login-box > h2 samp {
-  font-size: 30px;
+  font-size: 1.6rem;
   color: #c69000;
 }
 .login-box > p {
-  font-size: 20px;
+  font-size: 1.2rem;
   line-height: 40px;
 }
 .login-box > .btn-box {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   position: relative;
 }
@@ -2026,7 +2139,7 @@ a:hover {
 }
 
 .regsiter {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   text-align: center;
 }

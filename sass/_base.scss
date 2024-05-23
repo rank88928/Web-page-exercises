@@ -127,3 +127,122 @@ a:hover {
 .no-scroll {
     overflow: hidden;
 }
+
+
+
+
+
+
+
+// 首頁動畫
+.animate__rotateInDownLeft,
+.animate__fadeInDown {
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+.animate__zoomIn,
+.animate__bounceInDown,
+.animate__rotateInUpLeft,
+.animate__fadeInUpBig {
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+}
+
+.animate__slideInUp,
+.animate__fadeIn {
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+}
+
+
+// 文字淡入
+.slogan,
+.about,
+.about-en {
+    animation-name: fade_in;
+}
+
+.slogan {
+    animation-duration: 5s;
+}
+
+.about {
+    animation-duration: 10s;
+}
+
+.about-en {
+    animation-duration: 15s;
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+// 圖片移動
+.buffalo {
+    animation-name: animation_fade_left;
+    animation-duration: 5s;
+}
+
+.farmer {
+    animation-duration: 7s;
+    animation-name: animation_fade_right;
+}
+
+.room {
+    animation-duration: 3s;
+    animation-name: animation_fade_left;
+}
+
+// 左入
+@keyframes animation_fade_left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+// 右入
+@keyframes animation_fade_right {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+// 鳥飛行路徑
+.bird {
+    animation-name: animation_flight;
+    offset-path: path("M 0 0 C 45 40 180 200 360 80 C 580 20 500 360 240 560 C 40 280 40 280 20 160 L 0 0 ");
+    offset-rotate: auto;
+    animation-duration: 5s;
+}
+
+@keyframes animation_flight {
+    0% {
+        opacity: 1;
+        offset-distance: 0%;
+    }
+
+    100% {
+        opacity: 0;
+        offset-distance: 100%;
+    }
+}

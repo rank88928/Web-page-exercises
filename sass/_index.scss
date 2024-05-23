@@ -240,8 +240,6 @@
     .about,
     .about-en {
         position: absolute;
-        top: 50%;
-        left: 50%;
 
         @media screen and (max-width:1200px) {
             display: none;
@@ -249,30 +247,35 @@
     }
 
     .buffalo {
+        top: 65%;
+        left: 20%;
         z-index: 1;
-        transform: translate(-100%, 55%);
     }
 
     .farmer {
         z-index: 1;
-        transform: translate(50%, 30%);
+        top: 60%;
+        left: 56%;
     }
 
     .room {
         z-index: -1;
-        transform: translate(30%, -18%);
+        top: 40%;
+        left: 58%;
     }
 
     .bird {
-        z-index: 2;
-        transform: translate(45%, -250%);
+        z-index: 9;
+        top: 15%;
+        left: 55%;
     }
 
     .slogan {
         font-size: 1rem;
         letter-spacing: 6px;
         line-height: 30px;
-        transform: translate(-260%, -450%);
+        top: 10%;
+        left: 15%;
 
         &::after {
             content: '';
@@ -284,7 +287,8 @@
     }
 
     .about {
-        transform: translate(220%, -125%);
+        top: 10%;
+        left: 75%;
         font-size: 1.2rem;
         writing-mode: vertical-rl;
 
@@ -294,7 +298,8 @@
     }
 
     .about-en {
-        transform: translate(-1550%, 25%);
+        top: 55%;
+        left: 15%;
         writing-mode: vertical-rl;
         font-size: 1rem;
     }
@@ -625,19 +630,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 //最新消息
 .latest-news {
     height: 800px;
@@ -705,11 +697,6 @@
         }
     }
 }
-
-
-
-
-
 
 
 
